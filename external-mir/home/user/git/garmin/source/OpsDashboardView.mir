@@ -217,9 +217,9 @@ _home_user_git_garmin_source_OpsDashboardView_mc_44_26_53_4_stop:
     }
     [ @file = "/home/user/git/garmin/source/OpsDashboardView.mc"; @line = 56; @symbol_functiondef = [drawStealthIndex,56,13,29]; @symbol_param<0> = [dc,56,30,32]; ]
     function drawStealthIndex(dc) {
-_home_user_git_garmin_source_OpsDashboardView_mc_56_34_95_4_start:
+_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_start:
 [ "/home/user/git/garmin/source/OpsDashboardView.mc" 57 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_95_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_95_4_stop" ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_stop" ]
         %settings.1 = local;
         symbol [ settings %settings.1 57 12 20 ];
         symbol [ System %tmp.1 57 23 29 ];
@@ -230,354 +230,412 @@ _home_user_git_garmin_source_OpsDashboardView_mc_56_34_95_4_start:
         lputv %settings.1 %tmp.3;
         symbol [ settings %settings.1 57 12 20 ];
 [ "/home/user/git/garmin/source/OpsDashboardView.mc" 58 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_95_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_95_4_stop" ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_stop" ]
         %isStealth.2 = local;
         symbol [ isStealth %isStealth.2 58 12 21 ];
         %tmp.4 = true;
         lputv %isStealth.2 %tmp.4;
         symbol [ isStealth %isStealth.2 58 12 21 ];
 [ "/home/user/git/garmin/source/OpsDashboardView.mc" 60 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_95_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_95_4_stop" ]
-        %x.3 = local;
-        symbol [ x %x.3 60 12 13 ];
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_stop" ]
+        %w.3 = local;
+        symbol [ w %w.3 60 12 13 ];
         %tmp.5 = lgetv %dc;
         symbol [ dc %tmp.5 60 16 18 ];
         symbol [ getWidth %tmp.6 60 19 27 ];
         %tmp.6 = getv function %tmp.5 :getWidth;
         %tmp.7 = invoke %tmp.5 %tmp.6();
-        %tmp.8 = 2;
-        %tmp.9 = div %tmp.7 %tmp.8;
-        lputv %x.3 %tmp.9;
-        symbol [ x %x.3 60 12 13 ];
+        lputv %w.3 %tmp.7;
+        symbol [ w %w.3 60 12 13 ];
 [ "/home/user/git/garmin/source/OpsDashboardView.mc" 61 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_95_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_95_4_stop" ]
-        %y.4 = local;
-        symbol [ y %y.4 61 12 13 ];
-        %tmp.10 = 25;
-        lputv %y.4 %tmp.10;
-        symbol [ y %y.4 61 12 13 ];
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_stop" ]
+        %h.4 = local;
+        symbol [ h %h.4 61 12 13 ];
+        %tmp.8 = lgetv %dc;
+        symbol [ dc %tmp.8 61 16 18 ];
+        symbol [ getHeight %tmp.9 61 19 28 ];
+        %tmp.9 = getv function %tmp.8 :getHeight;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        lputv %h.4 %tmp.10;
+        symbol [ h %h.4 61 12 13 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 62 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_stop" ]
+        %cx.5 = local;
+        symbol [ cx %cx.5 62 12 14 ];
+        %tmp.11 = lgetv %w.3;
+        symbol [ w %tmp.11 62 17 18 ];
+        %tmp.12 = 2;
+        %tmp.13 = div %tmp.11 %tmp.12;
+        lputv %cx.5 %tmp.13;
+        symbol [ cx %cx.5 62 12 14 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 63 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_stop" ]
+        %y.6 = local;
+        symbol [ y %y.6 63 12 13 ];
+        %tmp.14 = lgetv %h.4;
+        symbol [ h %tmp.14 63 16 17 ];
+        %tmp.15 = 0.15;
+        %tmp.16 = mul %tmp.14 %tmp.15;
+        lputv %y.6 %tmp.16;
+        symbol [ y %y.6 63 12 13 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 64 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_stop" ]
+        %iconOffset.7 = local;
+        symbol [ iconOffset %iconOffset.7 64 12 22 ];
+        %tmp.17 = lgetv %w.3;
+        symbol [ w %tmp.17 64 25 26 ];
+        %tmp.18 = 0.12;
+        %tmp.19 = mul %tmp.17 %tmp.18;
+        lputv %iconOffset.7 %tmp.19;
+        symbol [ iconOffset %iconOffset.7 64 12 22 ];
 [ "/home/user/git/garmin/source/OpsDashboardView.mc" 65 8 ]
-_home_user_git_garmin_source_OpsDashboardView_mc_65_8_72_8_if_stmt:
-        %tmp.11 = lgetv %settings.1;
-        symbol [ settings %tmp.11 65 12 20 ];
-        symbol [ phoneConnected %tmp.12 65 21 35 ];
-        %tmp.12 = getv %tmp.11 :phoneConnected;
-        bf %tmp.12 @_home_user_git_garmin_source_OpsDashboardView_mc_65_8_72_8_if_else_false;
-_home_user_git_garmin_source_OpsDashboardView_mc_65_8_72_8_if_true:
-_home_user_git_garmin_source_OpsDashboardView_mc_65_37_69_8_start:
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 66 12 ]
-        %tmp.13 = lgetv %dc;
-        symbol [ dc %tmp.13 66 12 14 ];
-        symbol [ setColor %tmp.14 66 15 23 ];
-        %tmp.14 = getv function %tmp.13 :setColor;
-        symbol [ Graphics %tmp.15 66 24 32 ];
-        %tmp.15 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLUE %tmp.16 66 33 43 ];
-        %tmp.16 = getv %tmp.15 :COLOR_BLUE;
-        symbol [ Graphics %tmp.17 66 45 53 ];
-        %tmp.17 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.18 66 54 71 ];
-        %tmp.18 = getv %tmp.17 :COLOR_TRANSPARENT;
-        invoke %tmp.13 %tmp.14(%tmp.16, %tmp.18);
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 67 12 ]
-        %tmp.19 = lgetv %dc;
-        symbol [ dc %tmp.19 67 12 14 ];
-        symbol [ fillCircle %tmp.20 67 15 25 ];
-        %tmp.20 = getv function %tmp.19 :fillCircle;
-        %tmp.21 = lgetv %x.3;
-        symbol [ x %tmp.21 67 26 27 ];
-        %tmp.22 = 20;
-        %tmp.23 = sub %tmp.21 %tmp.22;
-        %tmp.24 = lgetv %y.4;
-        symbol [ y %tmp.24 67 34 35 ];
-        %tmp.25 = 4;
-        invoke %tmp.19 %tmp.20(%tmp.23, %tmp.24, %tmp.25);
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 68 12 ]
-        %tmp.26 = false;
-        lputv %isStealth.2 %tmp.26;
-        symbol [ isStealth %isStealth.2 68 12 21 ];
-_home_user_git_garmin_source_OpsDashboardView_mc_65_37_69_8_stop:
-        goto @_home_user_git_garmin_source_OpsDashboardView_mc_65_8_72_8_if_end;
-_home_user_git_garmin_source_OpsDashboardView_mc_65_8_72_8_if_else_false:
-_home_user_git_garmin_source_OpsDashboardView_mc_69_15_72_8_start:
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_stop" ]
+        %r.8 = local;
+        symbol [ r %r.8 65 12 13 ];
+        %tmp.20 = lgetv %w.3;
+        symbol [ w %tmp.20 65 16 17 ];
+        %tmp.21 = 0.025;
+        %tmp.22 = mul %tmp.20 %tmp.21;
+        lputv %r.8 %tmp.22;
+        symbol [ r %r.8 65 12 13 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 69 8 ]
+_home_user_git_garmin_source_OpsDashboardView_mc_69_8_76_8_if_stmt:
+        %tmp.23 = lgetv %settings.1;
+        symbol [ settings %tmp.23 69 12 20 ];
+        symbol [ phoneConnected %tmp.24 69 21 35 ];
+        %tmp.24 = getv %tmp.23 :phoneConnected;
+        bf %tmp.24 @_home_user_git_garmin_source_OpsDashboardView_mc_69_8_76_8_if_else_false;
+_home_user_git_garmin_source_OpsDashboardView_mc_69_8_76_8_if_true:
+_home_user_git_garmin_source_OpsDashboardView_mc_69_37_73_8_start:
 [ "/home/user/git/garmin/source/OpsDashboardView.mc" 70 12 ]
-        %tmp.27 = lgetv %dc;
-        symbol [ dc %tmp.27 70 12 14 ];
-        symbol [ setColor %tmp.28 70 15 23 ];
-        %tmp.28 = getv function %tmp.27 :setColor;
-        symbol [ Graphics %tmp.29 70 24 32 ];
+        %tmp.25 = lgetv %dc;
+        symbol [ dc %tmp.25 70 12 14 ];
+        symbol [ setColor %tmp.26 70 15 23 ];
+        %tmp.26 = getv function %tmp.25 :setColor;
+        symbol [ Graphics %tmp.27 70 24 32 ];
+        %tmp.27 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLUE %tmp.28 70 33 43 ];
+        %tmp.28 = getv %tmp.27 :COLOR_BLUE;
+        symbol [ Graphics %tmp.29 70 45 53 ];
         %tmp.29 = getm $.Toybox.Graphics;
-        symbol [ COLOR_DK_GRAY %tmp.30 70 33 46 ];
-        %tmp.30 = getv %tmp.29 :COLOR_DK_GRAY;
-        symbol [ Graphics %tmp.31 70 48 56 ];
-        %tmp.31 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.32 70 57 74 ];
-        %tmp.32 = getv %tmp.31 :COLOR_TRANSPARENT;
-        invoke %tmp.27 %tmp.28(%tmp.30, %tmp.32);
+        symbol [ COLOR_TRANSPARENT %tmp.30 70 54 71 ];
+        %tmp.30 = getv %tmp.29 :COLOR_TRANSPARENT;
+        invoke %tmp.25 %tmp.26(%tmp.28, %tmp.30);
 [ "/home/user/git/garmin/source/OpsDashboardView.mc" 71 12 ]
-        %tmp.33 = lgetv %dc;
-        symbol [ dc %tmp.33 71 12 14 ];
-        symbol [ drawCircle %tmp.34 71 15 25 ];
-        %tmp.34 = getv function %tmp.33 :drawCircle;
-        %tmp.35 = lgetv %x.3;
-        symbol [ x %tmp.35 71 26 27 ];
-        %tmp.36 = 20;
-        %tmp.37 = sub %tmp.35 %tmp.36;
-        %tmp.38 = lgetv %y.4;
-        symbol [ y %tmp.38 71 34 35 ];
-        %tmp.39 = 4;
-        invoke %tmp.33 %tmp.34(%tmp.37, %tmp.38, %tmp.39);
-_home_user_git_garmin_source_OpsDashboardView_mc_69_15_72_8_stop:
-_home_user_git_garmin_source_OpsDashboardView_mc_65_8_72_8_if_end:
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 76 8 ]
-_home_user_git_garmin_source_OpsDashboardView_mc_76_8_83_8_if_stmt:
-        %tmp.40 = lgetv %settings.1;
-        symbol [ settings %tmp.40 76 12 20 ];
-        symbol [ vibrateOn %tmp.41 76 21 30 ];
-        %tmp.41 = getv %tmp.40 :vibrateOn;
-        bf %tmp.41 @_home_user_git_garmin_source_OpsDashboardView_mc_76_8_83_8_if_else_false;
-_home_user_git_garmin_source_OpsDashboardView_mc_76_8_83_8_if_true:
-_home_user_git_garmin_source_OpsDashboardView_mc_76_32_80_8_start:
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 77 12 ]
-        %tmp.42 = lgetv %dc;
-        symbol [ dc %tmp.42 77 12 14 ];
-        symbol [ setColor %tmp.43 77 15 23 ];
-        %tmp.43 = getv function %tmp.42 :setColor;
-        symbol [ Graphics %tmp.44 77 24 32 ];
-        %tmp.44 = getm $.Toybox.Graphics;
-        symbol [ COLOR_YELLOW %tmp.45 77 33 45 ];
-        %tmp.45 = getv %tmp.44 :COLOR_YELLOW;
-        symbol [ Graphics %tmp.46 77 47 55 ];
-        %tmp.46 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.47 77 56 73 ];
-        %tmp.47 = getv %tmp.46 :COLOR_TRANSPARENT;
-        invoke %tmp.42 %tmp.43(%tmp.45, %tmp.47);
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 78 12 ]
-        %tmp.48 = lgetv %dc;
-        symbol [ dc %tmp.48 78 12 14 ];
-        symbol [ fillCircle %tmp.49 78 15 25 ];
-        %tmp.49 = getv function %tmp.48 :fillCircle;
-        %tmp.50 = lgetv %x.3;
-        symbol [ x %tmp.50 78 26 27 ];
-        %tmp.51 = lgetv %y.4;
-        symbol [ y %tmp.51 78 29 30 ];
-        %tmp.52 = 5;
-        %tmp.53 = sub %tmp.51 %tmp.52;
-        %tmp.54 = 4;
-        invoke %tmp.48 %tmp.49(%tmp.50, %tmp.53, %tmp.54);
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 79 12 ]
-        %tmp.55 = false;
-        lputv %isStealth.2 %tmp.55;
-        symbol [ isStealth %isStealth.2 79 12 21 ];
-_home_user_git_garmin_source_OpsDashboardView_mc_76_32_80_8_stop:
-        goto @_home_user_git_garmin_source_OpsDashboardView_mc_76_8_83_8_if_end;
-_home_user_git_garmin_source_OpsDashboardView_mc_76_8_83_8_if_else_false:
-_home_user_git_garmin_source_OpsDashboardView_mc_80_15_83_8_start:
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 81 12 ]
-        %tmp.56 = lgetv %dc;
-        symbol [ dc %tmp.56 81 12 14 ];
-        symbol [ setColor %tmp.57 81 15 23 ];
-        %tmp.57 = getv function %tmp.56 :setColor;
-        symbol [ Graphics %tmp.58 81 24 32 ];
+        %tmp.31 = lgetv %dc;
+        symbol [ dc %tmp.31 71 12 14 ];
+        symbol [ fillCircle %tmp.32 71 15 25 ];
+        %tmp.32 = getv function %tmp.31 :fillCircle;
+        %tmp.33 = lgetv %cx.5;
+        symbol [ cx %tmp.33 71 26 28 ];
+        %tmp.34 = lgetv %iconOffset.7;
+        symbol [ iconOffset %tmp.34 71 31 41 ];
+        %tmp.35 = sub %tmp.33 %tmp.34;
+        %tmp.36 = lgetv %y.6;
+        symbol [ y %tmp.36 71 43 44 ];
+        %tmp.37 = lgetv %r.8;
+        symbol [ r %tmp.37 71 46 47 ];
+        invoke %tmp.31 %tmp.32(%tmp.35, %tmp.36, %tmp.37);
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 72 12 ]
+        %tmp.38 = false;
+        lputv %isStealth.2 %tmp.38;
+        symbol [ isStealth %isStealth.2 72 12 21 ];
+_home_user_git_garmin_source_OpsDashboardView_mc_69_37_73_8_stop:
+        goto @_home_user_git_garmin_source_OpsDashboardView_mc_69_8_76_8_if_end;
+_home_user_git_garmin_source_OpsDashboardView_mc_69_8_76_8_if_else_false:
+_home_user_git_garmin_source_OpsDashboardView_mc_73_15_76_8_start:
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 74 12 ]
+        %tmp.39 = lgetv %dc;
+        symbol [ dc %tmp.39 74 12 14 ];
+        symbol [ setColor %tmp.40 74 15 23 ];
+        %tmp.40 = getv function %tmp.39 :setColor;
+        symbol [ Graphics %tmp.41 74 24 32 ];
+        %tmp.41 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.42 74 33 46 ];
+        %tmp.42 = getv %tmp.41 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.43 74 48 56 ];
+        %tmp.43 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.44 74 57 74 ];
+        %tmp.44 = getv %tmp.43 :COLOR_TRANSPARENT;
+        invoke %tmp.39 %tmp.40(%tmp.42, %tmp.44);
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 75 12 ]
+        %tmp.45 = lgetv %dc;
+        symbol [ dc %tmp.45 75 12 14 ];
+        symbol [ drawCircle %tmp.46 75 15 25 ];
+        %tmp.46 = getv function %tmp.45 :drawCircle;
+        %tmp.47 = lgetv %cx.5;
+        symbol [ cx %tmp.47 75 26 28 ];
+        %tmp.48 = lgetv %iconOffset.7;
+        symbol [ iconOffset %tmp.48 75 31 41 ];
+        %tmp.49 = sub %tmp.47 %tmp.48;
+        %tmp.50 = lgetv %y.6;
+        symbol [ y %tmp.50 75 43 44 ];
+        %tmp.51 = lgetv %r.8;
+        symbol [ r %tmp.51 75 46 47 ];
+        invoke %tmp.45 %tmp.46(%tmp.49, %tmp.50, %tmp.51);
+_home_user_git_garmin_source_OpsDashboardView_mc_73_15_76_8_stop:
+_home_user_git_garmin_source_OpsDashboardView_mc_69_8_76_8_if_end:
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 79 8 ]
+_home_user_git_garmin_source_OpsDashboardView_mc_79_8_86_8_if_stmt:
+        %tmp.52 = lgetv %settings.1;
+        symbol [ settings %tmp.52 79 12 20 ];
+        symbol [ vibrateOn %tmp.53 79 21 30 ];
+        %tmp.53 = getv %tmp.52 :vibrateOn;
+        bf %tmp.53 @_home_user_git_garmin_source_OpsDashboardView_mc_79_8_86_8_if_else_false;
+_home_user_git_garmin_source_OpsDashboardView_mc_79_8_86_8_if_true:
+_home_user_git_garmin_source_OpsDashboardView_mc_79_32_83_8_start:
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 80 12 ]
+        %tmp.54 = lgetv %dc;
+        symbol [ dc %tmp.54 80 12 14 ];
+        symbol [ setColor %tmp.55 80 15 23 ];
+        %tmp.55 = getv function %tmp.54 :setColor;
+        symbol [ Graphics %tmp.56 80 24 32 ];
+        %tmp.56 = getm $.Toybox.Graphics;
+        symbol [ COLOR_YELLOW %tmp.57 80 33 45 ];
+        %tmp.57 = getv %tmp.56 :COLOR_YELLOW;
+        symbol [ Graphics %tmp.58 80 47 55 ];
         %tmp.58 = getm $.Toybox.Graphics;
-        symbol [ COLOR_DK_GRAY %tmp.59 81 33 46 ];
-        %tmp.59 = getv %tmp.58 :COLOR_DK_GRAY;
-        symbol [ Graphics %tmp.60 81 48 56 ];
-        %tmp.60 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.61 81 57 74 ];
-        %tmp.61 = getv %tmp.60 :COLOR_TRANSPARENT;
-        invoke %tmp.56 %tmp.57(%tmp.59, %tmp.61);
+        symbol [ COLOR_TRANSPARENT %tmp.59 80 56 73 ];
+        %tmp.59 = getv %tmp.58 :COLOR_TRANSPARENT;
+        invoke %tmp.54 %tmp.55(%tmp.57, %tmp.59);
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 81 12 ]
+        %tmp.60 = lgetv %dc;
+        symbol [ dc %tmp.60 81 12 14 ];
+        symbol [ fillCircle %tmp.61 81 15 25 ];
+        %tmp.61 = getv function %tmp.60 :fillCircle;
+        %tmp.62 = lgetv %cx.5;
+        symbol [ cx %tmp.62 81 26 28 ];
+        %tmp.63 = lgetv %y.6;
+        symbol [ y %tmp.63 81 30 31 ];
+        %tmp.64 = lgetv %r.8;
+        symbol [ r %tmp.64 81 35 36 ];
+        %tmp.65 = 1.2;
+        %tmp.66 = mul %tmp.64 %tmp.65;
+        %tmp.67 = sub %tmp.63 %tmp.66;
+        %tmp.68 = lgetv %r.8;
+        symbol [ r %tmp.68 81 43 44 ];
+        invoke %tmp.60 %tmp.61(%tmp.62, %tmp.67, %tmp.68);
 [ "/home/user/git/garmin/source/OpsDashboardView.mc" 82 12 ]
-        %tmp.62 = lgetv %dc;
-        symbol [ dc %tmp.62 82 12 14 ];
-        symbol [ drawCircle %tmp.63 82 15 25 ];
-        %tmp.63 = getv function %tmp.62 :drawCircle;
-        %tmp.64 = lgetv %x.3;
-        symbol [ x %tmp.64 82 26 27 ];
-        %tmp.65 = lgetv %y.4;
-        symbol [ y %tmp.65 82 29 30 ];
-        %tmp.66 = 5;
-        %tmp.67 = sub %tmp.65 %tmp.66;
-        %tmp.68 = 4;
-        invoke %tmp.62 %tmp.63(%tmp.64, %tmp.67, %tmp.68);
-_home_user_git_garmin_source_OpsDashboardView_mc_80_15_83_8_stop:
-_home_user_git_garmin_source_OpsDashboardView_mc_76_8_83_8_if_end:
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 86 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_95_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_95_4_stop" ]
-        %info.5 = local;
-        symbol [ info %info.5 86 12 16 ];
-        symbol [ Position %tmp.69 86 19 27 ];
-        %tmp.69 = getm $.Toybox.Position;
-        symbol [ getInfo %tmp.70 86 28 35 ];
-        %tmp.70 = getv function %tmp.69 :getInfo;
-        %tmp.71 = invoke %tmp.69 %tmp.70();
-        lputv %info.5 %tmp.71;
-        symbol [ info %info.5 86 12 16 ];
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 87 8 ]
-_home_user_git_garmin_source_OpsDashboardView_mc_87_8_94_8_if_stmt:
-        %tmp.72 = lgetv %info.5;
-        symbol [ info %tmp.72 87 12 16 ];
-        symbol [ accuracy %tmp.73 87 17 25 ];
-        %tmp.73 = getv %tmp.72 :accuracy;
-        symbol [ Position %tmp.74 87 28 36 ];
-        %tmp.74 = getm $.Toybox.Position;
-        symbol [ QUALITY_POOR %tmp.75 87 37 49 ];
-        %tmp.75 = getv %tmp.74 :QUALITY_POOR;
-        %tmp.76 = gt %tmp.73 %tmp.75;
-        bf %tmp.76 @_home_user_git_garmin_source_OpsDashboardView_mc_87_8_94_8_if_else_false;
-_home_user_git_garmin_source_OpsDashboardView_mc_87_8_94_8_if_true:
-_home_user_git_garmin_source_OpsDashboardView_mc_87_51_91_8_start:
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 88 13 ]
-        %tmp.77 = lgetv %dc;
-        symbol [ dc %tmp.77 88 13 15 ];
-        symbol [ setColor %tmp.78 88 16 24 ];
-        %tmp.78 = getv function %tmp.77 :setColor;
-        symbol [ Graphics %tmp.79 88 25 33 ];
-        %tmp.79 = getm $.Toybox.Graphics;
-        symbol [ COLOR_GREEN %tmp.80 88 34 45 ];
-        %tmp.80 = getv %tmp.79 :COLOR_GREEN;
-        symbol [ Graphics %tmp.81 88 47 55 ];
-        %tmp.81 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.82 88 56 73 ];
-        %tmp.82 = getv %tmp.81 :COLOR_TRANSPARENT;
-        invoke %tmp.77 %tmp.78(%tmp.80, %tmp.82);
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 89 13 ]
-        %tmp.83 = lgetv %dc;
-        symbol [ dc %tmp.83 89 13 15 ];
-        symbol [ fillCircle %tmp.84 89 16 26 ];
-        %tmp.84 = getv function %tmp.83 :fillCircle;
-        %tmp.85 = lgetv %x.3;
-        symbol [ x %tmp.85 89 27 28 ];
-        %tmp.86 = 20;
-        %tmp.87 = add %tmp.85 %tmp.86;
-        %tmp.88 = lgetv %y.4;
-        symbol [ y %tmp.88 89 35 36 ];
-        %tmp.89 = 4;
-        invoke %tmp.83 %tmp.84(%tmp.87, %tmp.88, %tmp.89);
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 90 13 ]
-        %tmp.90 = false;
-        lputv %isStealth.2 %tmp.90;
-        symbol [ isStealth %isStealth.2 90 13 22 ];
-_home_user_git_garmin_source_OpsDashboardView_mc_87_51_91_8_stop:
-        goto @_home_user_git_garmin_source_OpsDashboardView_mc_87_8_94_8_if_end;
-_home_user_git_garmin_source_OpsDashboardView_mc_87_8_94_8_if_else_false:
-_home_user_git_garmin_source_OpsDashboardView_mc_91_15_94_8_start:
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 92 13 ]
-        %tmp.91 = lgetv %dc;
-        symbol [ dc %tmp.91 92 13 15 ];
-        symbol [ setColor %tmp.92 92 16 24 ];
-        %tmp.92 = getv function %tmp.91 :setColor;
-        symbol [ Graphics %tmp.93 92 25 33 ];
-        %tmp.93 = getm $.Toybox.Graphics;
-        symbol [ COLOR_DK_GRAY %tmp.94 92 34 47 ];
-        %tmp.94 = getv %tmp.93 :COLOR_DK_GRAY;
-        symbol [ Graphics %tmp.95 92 49 57 ];
+        %tmp.69 = false;
+        lputv %isStealth.2 %tmp.69;
+        symbol [ isStealth %isStealth.2 82 12 21 ];
+_home_user_git_garmin_source_OpsDashboardView_mc_79_32_83_8_stop:
+        goto @_home_user_git_garmin_source_OpsDashboardView_mc_79_8_86_8_if_end;
+_home_user_git_garmin_source_OpsDashboardView_mc_79_8_86_8_if_else_false:
+_home_user_git_garmin_source_OpsDashboardView_mc_83_15_86_8_start:
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 84 12 ]
+        %tmp.70 = lgetv %dc;
+        symbol [ dc %tmp.70 84 12 14 ];
+        symbol [ setColor %tmp.71 84 15 23 ];
+        %tmp.71 = getv function %tmp.70 :setColor;
+        symbol [ Graphics %tmp.72 84 24 32 ];
+        %tmp.72 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.73 84 33 46 ];
+        %tmp.73 = getv %tmp.72 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.74 84 48 56 ];
+        %tmp.74 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.75 84 57 74 ];
+        %tmp.75 = getv %tmp.74 :COLOR_TRANSPARENT;
+        invoke %tmp.70 %tmp.71(%tmp.73, %tmp.75);
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 85 12 ]
+        %tmp.76 = lgetv %dc;
+        symbol [ dc %tmp.76 85 12 14 ];
+        symbol [ drawCircle %tmp.77 85 15 25 ];
+        %tmp.77 = getv function %tmp.76 :drawCircle;
+        %tmp.78 = lgetv %cx.5;
+        symbol [ cx %tmp.78 85 26 28 ];
+        %tmp.79 = lgetv %y.6;
+        symbol [ y %tmp.79 85 30 31 ];
+        %tmp.80 = lgetv %r.8;
+        symbol [ r %tmp.80 85 35 36 ];
+        %tmp.81 = 1.2;
+        %tmp.82 = mul %tmp.80 %tmp.81;
+        %tmp.83 = sub %tmp.79 %tmp.82;
+        %tmp.84 = lgetv %r.8;
+        symbol [ r %tmp.84 85 43 44 ];
+        invoke %tmp.76 %tmp.77(%tmp.78, %tmp.83, %tmp.84);
+_home_user_git_garmin_source_OpsDashboardView_mc_83_15_86_8_stop:
+_home_user_git_garmin_source_OpsDashboardView_mc_79_8_86_8_if_end:
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 89 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_stop" ]
+        %info.9 = local;
+        symbol [ info %info.9 89 12 16 ];
+        symbol [ Position %tmp.85 89 19 27 ];
+        %tmp.85 = getm $.Toybox.Position;
+        symbol [ getInfo %tmp.86 89 28 35 ];
+        %tmp.86 = getv function %tmp.85 :getInfo;
+        %tmp.87 = invoke %tmp.85 %tmp.86();
+        lputv %info.9 %tmp.87;
+        symbol [ info %info.9 89 12 16 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 90 8 ]
+_home_user_git_garmin_source_OpsDashboardView_mc_90_8_97_8_if_stmt:
+        %tmp.88 = lgetv %info.9;
+        symbol [ info %tmp.88 90 12 16 ];
+        symbol [ accuracy %tmp.89 90 17 25 ];
+        %tmp.89 = getv %tmp.88 :accuracy;
+        symbol [ Position %tmp.90 90 28 36 ];
+        %tmp.90 = getm $.Toybox.Position;
+        symbol [ QUALITY_POOR %tmp.91 90 37 49 ];
+        %tmp.91 = getv %tmp.90 :QUALITY_POOR;
+        %tmp.92 = gt %tmp.89 %tmp.91;
+        bf %tmp.92 @_home_user_git_garmin_source_OpsDashboardView_mc_90_8_97_8_if_else_false;
+_home_user_git_garmin_source_OpsDashboardView_mc_90_8_97_8_if_true:
+_home_user_git_garmin_source_OpsDashboardView_mc_90_51_94_8_start:
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 91 13 ]
+        %tmp.93 = lgetv %dc;
+        symbol [ dc %tmp.93 91 13 15 ];
+        symbol [ setColor %tmp.94 91 16 24 ];
+        %tmp.94 = getv function %tmp.93 :setColor;
+        symbol [ Graphics %tmp.95 91 25 33 ];
         %tmp.95 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.96 92 58 75 ];
-        %tmp.96 = getv %tmp.95 :COLOR_TRANSPARENT;
-        invoke %tmp.91 %tmp.92(%tmp.94, %tmp.96);
+        symbol [ COLOR_GREEN %tmp.96 91 34 45 ];
+        %tmp.96 = getv %tmp.95 :COLOR_GREEN;
+        symbol [ Graphics %tmp.97 91 47 55 ];
+        %tmp.97 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.98 91 56 73 ];
+        %tmp.98 = getv %tmp.97 :COLOR_TRANSPARENT;
+        invoke %tmp.93 %tmp.94(%tmp.96, %tmp.98);
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 92 13 ]
+        %tmp.99 = lgetv %dc;
+        symbol [ dc %tmp.99 92 13 15 ];
+        symbol [ fillCircle %tmp.100 92 16 26 ];
+        %tmp.100 = getv function %tmp.99 :fillCircle;
+        %tmp.101 = lgetv %cx.5;
+        symbol [ cx %tmp.101 92 27 29 ];
+        %tmp.102 = lgetv %iconOffset.7;
+        symbol [ iconOffset %tmp.102 92 32 42 ];
+        %tmp.103 = add %tmp.101 %tmp.102;
+        %tmp.104 = lgetv %y.6;
+        symbol [ y %tmp.104 92 44 45 ];
+        %tmp.105 = lgetv %r.8;
+        symbol [ r %tmp.105 92 47 48 ];
+        invoke %tmp.99 %tmp.100(%tmp.103, %tmp.104, %tmp.105);
 [ "/home/user/git/garmin/source/OpsDashboardView.mc" 93 13 ]
-        %tmp.97 = lgetv %dc;
-        symbol [ dc %tmp.97 93 13 15 ];
-        symbol [ drawCircle %tmp.98 93 16 26 ];
-        %tmp.98 = getv function %tmp.97 :drawCircle;
-        %tmp.99 = lgetv %x.3;
-        symbol [ x %tmp.99 93 27 28 ];
-        %tmp.100 = 20;
-        %tmp.101 = add %tmp.99 %tmp.100;
-        %tmp.102 = lgetv %y.4;
-        symbol [ y %tmp.102 93 35 36 ];
-        %tmp.103 = 4;
-        invoke %tmp.97 %tmp.98(%tmp.101, %tmp.102, %tmp.103);
-_home_user_git_garmin_source_OpsDashboardView_mc_91_15_94_8_stop:
-_home_user_git_garmin_source_OpsDashboardView_mc_87_8_94_8_if_end:
-_home_user_git_garmin_source_OpsDashboardView_mc_56_34_95_4_stop:
+        %tmp.106 = false;
+        lputv %isStealth.2 %tmp.106;
+        symbol [ isStealth %isStealth.2 93 13 22 ];
+_home_user_git_garmin_source_OpsDashboardView_mc_90_51_94_8_stop:
+        goto @_home_user_git_garmin_source_OpsDashboardView_mc_90_8_97_8_if_end;
+_home_user_git_garmin_source_OpsDashboardView_mc_90_8_97_8_if_else_false:
+_home_user_git_garmin_source_OpsDashboardView_mc_94_15_97_8_start:
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 95 13 ]
+        %tmp.107 = lgetv %dc;
+        symbol [ dc %tmp.107 95 13 15 ];
+        symbol [ setColor %tmp.108 95 16 24 ];
+        %tmp.108 = getv function %tmp.107 :setColor;
+        symbol [ Graphics %tmp.109 95 25 33 ];
+        %tmp.109 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.110 95 34 47 ];
+        %tmp.110 = getv %tmp.109 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.111 95 49 57 ];
+        %tmp.111 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.112 95 58 75 ];
+        %tmp.112 = getv %tmp.111 :COLOR_TRANSPARENT;
+        invoke %tmp.107 %tmp.108(%tmp.110, %tmp.112);
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 96 13 ]
+        %tmp.113 = lgetv %dc;
+        symbol [ dc %tmp.113 96 13 15 ];
+        symbol [ drawCircle %tmp.114 96 16 26 ];
+        %tmp.114 = getv function %tmp.113 :drawCircle;
+        %tmp.115 = lgetv %cx.5;
+        symbol [ cx %tmp.115 96 27 29 ];
+        %tmp.116 = lgetv %iconOffset.7;
+        symbol [ iconOffset %tmp.116 96 32 42 ];
+        %tmp.117 = add %tmp.115 %tmp.116;
+        %tmp.118 = lgetv %y.6;
+        symbol [ y %tmp.118 96 44 45 ];
+        %tmp.119 = lgetv %r.8;
+        symbol [ r %tmp.119 96 47 48 ];
+        invoke %tmp.113 %tmp.114(%tmp.117, %tmp.118, %tmp.119);
+_home_user_git_garmin_source_OpsDashboardView_mc_94_15_97_8_stop:
+_home_user_git_garmin_source_OpsDashboardView_mc_90_8_97_8_if_end:
+_home_user_git_garmin_source_OpsDashboardView_mc_56_34_98_4_stop:
     }
-    [ @file = "/home/user/git/garmin/source/OpsDashboardView.mc"; @line = 98; @symbol_functiondef = [drawMGRS,98,13,21]; @symbol_param<0> = [dc,98,22,24]; ]
+    [ @file = "/home/user/git/garmin/source/OpsDashboardView.mc"; @line = 101; @symbol_functiondef = [drawMGRS,101,13,21]; @symbol_param<0> = [dc,101,22,24]; ]
     function drawMGRS(dc) {
-_home_user_git_garmin_source_OpsDashboardView_mc_98_26_127_4_start:
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 99 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_98_26_127_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_98_26_127_4_stop" ]
+_home_user_git_garmin_source_OpsDashboardView_mc_101_26_118_4_start:
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 102 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_101_26_118_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_101_26_118_4_stop" ]
         %info.1 = local;
-        symbol [ info %info.1 99 12 16 ];
-        symbol [ Position %tmp.1 99 19 27 ];
+        symbol [ info %info.1 102 12 16 ];
+        symbol [ Position %tmp.1 102 19 27 ];
         %tmp.1 = getm $.Toybox.Position;
-        symbol [ getInfo %tmp.2 99 28 35 ];
+        symbol [ getInfo %tmp.2 102 28 35 ];
         %tmp.2 = getv function %tmp.1 :getInfo;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %info.1 %tmp.3;
-        symbol [ info %info.1 99 12 16 ];
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 100 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_98_26_127_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_98_26_127_4_stop" ]
+        symbol [ info %info.1 102 12 16 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 103 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_101_26_118_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_101_26_118_4_stop" ]
         %coordString.2 = local;
-        symbol [ coordString %coordString.2 100 12 23 ];
+        symbol [ coordString %coordString.2 103 12 23 ];
         %tmp.4 = "NO GPS";
         lputv %coordString.2 %tmp.4;
-        symbol [ coordString %coordString.2 100 12 23 ];
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 102 8 ]
-_home_user_git_garmin_source_OpsDashboardView_mc_102_8_108_8_if_stmt:
-_home_user_git_garmin_source_OpsDashboardView_mc_102_12_102_53_begin:
+        symbol [ coordString %coordString.2 103 12 23 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 105 8 ]
+_home_user_git_garmin_source_OpsDashboardView_mc_105_8_110_8_if_stmt:
+_home_user_git_garmin_source_OpsDashboardView_mc_105_12_105_53_begin:
         %tmp.5 = lgetv %info.1;
-        symbol [ info %tmp.5 102 12 16 ];
+        symbol [ info %tmp.5 105 12 16 ];
         %tmp.6 = null;
         %tmp.7 = ne %tmp.5 %tmp.6;
-        bf %tmp.7 @_home_user_git_garmin_source_OpsDashboardView_mc_102_8_108_8_if_end;
-_home_user_git_garmin_source_OpsDashboardView_mc_102_28_102_53_true:
+        bf %tmp.7 @_home_user_git_garmin_source_OpsDashboardView_mc_105_8_110_8_if_end;
+_home_user_git_garmin_source_OpsDashboardView_mc_105_28_105_53_true:
         %tmp.8 = lgetv %info.1;
-        symbol [ info %tmp.8 102 28 32 ];
+        symbol [ info %tmp.8 105 28 32 ];
         %tmp.9 = as %tmp.8 { (!Null) };
-        symbol [ accuracy %tmp.10 102 33 41 ];
+        symbol [ accuracy %tmp.10 105 33 41 ];
         %tmp.10 = getv %tmp.9 :accuracy;
-        symbol [ Position %tmp.11 102 44 52 ];
+        symbol [ Position %tmp.11 105 44 52 ];
         %tmp.11 = getm $.Toybox.Position;
-        symbol [ QUALITY_NOT_AVAILABLE %tmp.12 102 53 74 ];
+        symbol [ QUALITY_NOT_AVAILABLE %tmp.12 105 53 74 ];
         %tmp.12 = getv %tmp.11 :QUALITY_NOT_AVAILABLE;
         %tmp.13 = gt %tmp.10 %tmp.12;
         push %tmp.13;
-_home_user_git_garmin_source_OpsDashboardView_mc_102_28_102_53_end:
-        %tmp.14 = phi [%tmp.7 @_home_user_git_garmin_source_OpsDashboardView_mc_102_12_102_53_begin] [%tmp.13 @_home_user_git_garmin_source_OpsDashboardView_mc_102_28_102_53_true] [%tmp.14 @_home_user_git_garmin_source_OpsDashboardView_mc_102_28_102_53_end];
-        bf %tmp.14 @_home_user_git_garmin_source_OpsDashboardView_mc_102_8_108_8_if_end;
-_home_user_git_garmin_source_OpsDashboardView_mc_102_8_108_8_if_true:
-_home_user_git_garmin_source_OpsDashboardView_mc_102_76_108_8_start:
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 104 12 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_102_76_108_8_start" "_home_user_git_garmin_source_OpsDashboardView_mc_102_76_108_8_stop" ]
+_home_user_git_garmin_source_OpsDashboardView_mc_105_28_105_53_end:
+        %tmp.14 = phi [%tmp.7 @_home_user_git_garmin_source_OpsDashboardView_mc_105_12_105_53_begin] [%tmp.13 @_home_user_git_garmin_source_OpsDashboardView_mc_105_28_105_53_true] [%tmp.14 @_home_user_git_garmin_source_OpsDashboardView_mc_105_28_105_53_end];
+        bf %tmp.14 @_home_user_git_garmin_source_OpsDashboardView_mc_105_8_110_8_if_end;
+_home_user_git_garmin_source_OpsDashboardView_mc_105_8_110_8_if_true:
+_home_user_git_garmin_source_OpsDashboardView_mc_105_76_110_8_start:
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 106 12 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_105_76_110_8_start" "_home_user_git_garmin_source_OpsDashboardView_mc_105_76_110_8_stop" ]
         %pos.3 = local;
-        symbol [ pos %pos.3 104 16 19 ];
+        symbol [ pos %pos.3 106 16 19 ];
         %tmp.15 = lgetv %info.1;
-        symbol [ info %tmp.15 104 22 26 ];
+        symbol [ info %tmp.15 106 22 26 ];
         %tmp.16 = as %tmp.15 { (!Null) };
-        symbol [ position %tmp.17 104 27 35 ];
+        symbol [ position %tmp.17 106 27 35 ];
         %tmp.17 = getv %tmp.16 :position;
         lputv %pos.3 %tmp.17;
-        symbol [ pos %pos.3 104 16 19 ];
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 105 12 ]
-_home_user_git_garmin_source_OpsDashboardView_mc_105_12_107_12_if_stmt:
+        symbol [ pos %pos.3 106 16 19 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 107 12 ]
+_home_user_git_garmin_source_OpsDashboardView_mc_107_12_109_12_if_stmt:
         %tmp.18 = lgetv %pos.3;
-        symbol [ pos %tmp.18 105 16 19 ];
+        symbol [ pos %tmp.18 107 16 19 ];
         %tmp.19 = null;
         %tmp.20 = ne %tmp.18 %tmp.19;
-        bf %tmp.20 @_home_user_git_garmin_source_OpsDashboardView_mc_105_12_107_12_if_end;
-_home_user_git_garmin_source_OpsDashboardView_mc_105_12_107_12_if_true:
-_home_user_git_garmin_source_OpsDashboardView_mc_105_29_107_12_start:
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 106 16 ]
+        bf %tmp.20 @_home_user_git_garmin_source_OpsDashboardView_mc_107_12_109_12_if_end;
+_home_user_git_garmin_source_OpsDashboardView_mc_107_12_109_12_if_true:
+_home_user_git_garmin_source_OpsDashboardView_mc_107_29_109_12_start:
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 108 16 ]
         %tmp.21 = lgetv %pos.3;
-        symbol [ pos %tmp.21 106 30 33 ];
+        symbol [ pos %tmp.21 108 30 33 ];
         %tmp.22 = as %tmp.21 { (!Null) };
-        symbol [ toGeoString %tmp.23 106 34 45 ];
+        symbol [ toGeoString %tmp.23 108 34 45 ];
         %tmp.23 = getv function %tmp.22 :toGeoString;
-        symbol [ Position %tmp.24 106 46 54 ];
+        symbol [ Position %tmp.24 108 46 54 ];
         %tmp.24 = getm $.Toybox.Position;
-        symbol [ GEO_MGRS %tmp.25 106 55 63 ];
+        symbol [ GEO_MGRS %tmp.25 108 55 63 ];
         %tmp.25 = getv %tmp.24 :GEO_MGRS;
         %tmp.26 = invoke %tmp.22 %tmp.23(%tmp.25);
         lputv %coordString.2 %tmp.26;
-        symbol [ coordString %coordString.2 106 16 27 ];
-_home_user_git_garmin_source_OpsDashboardView_mc_105_29_107_12_stop:
-        goto @_home_user_git_garmin_source_OpsDashboardView_mc_105_12_107_12_if_end;
-_home_user_git_garmin_source_OpsDashboardView_mc_105_12_107_12_if_end:
-_home_user_git_garmin_source_OpsDashboardView_mc_102_76_108_8_stop:
-        goto @_home_user_git_garmin_source_OpsDashboardView_mc_102_8_108_8_if_end;
-_home_user_git_garmin_source_OpsDashboardView_mc_102_8_108_8_if_end:
+        symbol [ coordString %coordString.2 108 16 27 ];
+_home_user_git_garmin_source_OpsDashboardView_mc_107_29_109_12_stop:
+        goto @_home_user_git_garmin_source_OpsDashboardView_mc_107_12_109_12_if_end;
+_home_user_git_garmin_source_OpsDashboardView_mc_107_12_109_12_if_end:
+_home_user_git_garmin_source_OpsDashboardView_mc_105_76_110_8_stop:
+        goto @_home_user_git_garmin_source_OpsDashboardView_mc_105_8_110_8_if_end;
+_home_user_git_garmin_source_OpsDashboardView_mc_105_8_110_8_if_end:
 [ "/home/user/git/garmin/source/OpsDashboardView.mc" 112 8 ]
         %tmp.27 = lgetv %dc;
         symbol [ dc %tmp.27 112 8 10 ];
@@ -592,437 +650,439 @@ _home_user_git_garmin_source_OpsDashboardView_mc_102_8_108_8_if_end:
         symbol [ COLOR_TRANSPARENT %tmp.32 112 51 68 ];
         %tmp.32 = getv %tmp.31 :COLOR_TRANSPARENT;
         invoke %tmp.27 %tmp.28(%tmp.30, %tmp.32);
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 114 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_98_26_127_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_98_26_127_4_stop" ]
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 113 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_101_26_118_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_101_26_118_4_stop" ]
         %w.4 = local;
-        symbol [ w %w.4 114 12 13 ];
+        symbol [ w %w.4 113 12 13 ];
         %tmp.33 = lgetv %dc;
-        symbol [ dc %tmp.33 114 16 18 ];
-        symbol [ getWidth %tmp.34 114 19 27 ];
+        symbol [ dc %tmp.33 113 16 18 ];
+        symbol [ getWidth %tmp.34 113 19 27 ];
         %tmp.34 = getv function %tmp.33 :getWidth;
         %tmp.35 = invoke %tmp.33 %tmp.34();
         lputv %w.4 %tmp.35;
-        symbol [ w %w.4 114 12 13 ];
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 115 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_98_26_127_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_98_26_127_4_stop" ]
+        symbol [ w %w.4 113 12 13 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 114 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_101_26_118_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_101_26_118_4_stop" ]
         %h.5 = local;
-        symbol [ h %h.5 115 12 13 ];
+        symbol [ h %h.5 114 12 13 ];
         %tmp.36 = lgetv %dc;
-        symbol [ dc %tmp.36 115 16 18 ];
-        symbol [ getHeight %tmp.37 115 19 28 ];
+        symbol [ dc %tmp.36 114 16 18 ];
+        symbol [ getHeight %tmp.37 114 19 28 ];
         %tmp.37 = getv function %tmp.36 :getHeight;
         %tmp.38 = invoke %tmp.36 %tmp.37();
         lputv %h.5 %tmp.38;
-        symbol [ h %h.5 115 12 13 ];
+        symbol [ h %h.5 114 12 13 ];
 [ "/home/user/git/garmin/source/OpsDashboardView.mc" 117 8 ]
-_home_user_git_garmin_source_OpsDashboardView_mc_117_8_126_8_if_stmt:
-        %tmp.39 = lgetv %coordString.2;
-        symbol [ coordString %tmp.39 117 12 23 ];
-        symbol [ length %tmp.40 117 24 30 ];
-        %tmp.40 = getv function %tmp.39 :length;
-        %tmp.41 = invoke %tmp.39 %tmp.40();
-        %tmp.42 = 5;
-        %tmp.43 = gt %tmp.41 %tmp.42;
-        bf %tmp.43 @_home_user_git_garmin_source_OpsDashboardView_mc_117_8_126_8_if_else_false;
-_home_user_git_garmin_source_OpsDashboardView_mc_117_8_126_8_if_true:
-_home_user_git_garmin_source_OpsDashboardView_mc_117_38_124_8_start:
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 123 12 ]
-        %tmp.44 = lgetv %dc;
-        symbol [ dc %tmp.44 123 12 14 ];
-        symbol [ drawText %tmp.45 123 15 23 ];
-        %tmp.45 = getv function %tmp.44 :drawText;
-        %tmp.46 = lgetv %w.4;
-        symbol [ w %tmp.46 123 24 25 ];
-        %tmp.47 = 2;
-        %tmp.48 = div %tmp.46 %tmp.47;
-        %tmp.49 = lgetv %h.5;
-        symbol [ h %tmp.49 123 29 30 ];
-        %tmp.50 = 2;
-        %tmp.51 = div %tmp.49 %tmp.50;
-        %tmp.52 = 20;
-        %tmp.53 = sub %tmp.51 %tmp.52;
-        symbol [ fontMGRS %tmp.55 123 39 47 ];
-        %tmp.55 = getv ? :fontMGRS;
-        %tmp.56 = lgetv %coordString.2;
-        symbol [ coordString %tmp.56 123 49 60 ];
-        symbol [ Graphics %tmp.57 123 62 70 ];
-        %tmp.57 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.58 123 71 90 ];
-        %tmp.58 = getv %tmp.57 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.44 %tmp.45(%tmp.48, %tmp.53, %tmp.55, %tmp.56, %tmp.58);
-_home_user_git_garmin_source_OpsDashboardView_mc_117_38_124_8_stop:
-        goto @_home_user_git_garmin_source_OpsDashboardView_mc_117_8_126_8_if_end;
-_home_user_git_garmin_source_OpsDashboardView_mc_117_8_126_8_if_else_false:
-_home_user_git_garmin_source_OpsDashboardView_mc_124_15_126_8_start:
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 125 12 ]
-        %tmp.59 = lgetv %dc;
-        symbol [ dc %tmp.59 125 12 14 ];
-        symbol [ drawText %tmp.60 125 15 23 ];
-        %tmp.60 = getv function %tmp.59 :drawText;
-        %tmp.61 = lgetv %w.4;
-        symbol [ w %tmp.61 125 24 25 ];
-        %tmp.62 = 2;
-        %tmp.63 = div %tmp.61 %tmp.62;
-        %tmp.64 = lgetv %h.5;
-        symbol [ h %tmp.64 125 29 30 ];
-        %tmp.65 = 2;
-        %tmp.66 = div %tmp.64 %tmp.65;
-        %tmp.67 = 20;
-        %tmp.68 = sub %tmp.66 %tmp.67;
-        symbol [ fontMGRS %tmp.70 125 39 47 ];
-        %tmp.70 = getv ? :fontMGRS;
-        %tmp.71 = lgetv %coordString.2;
-        symbol [ coordString %tmp.71 125 49 60 ];
-        symbol [ Graphics %tmp.72 125 62 70 ];
-        %tmp.72 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.73 125 71 90 ];
-        %tmp.73 = getv %tmp.72 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.59 %tmp.60(%tmp.63, %tmp.68, %tmp.70, %tmp.71, %tmp.73);
-_home_user_git_garmin_source_OpsDashboardView_mc_124_15_126_8_stop:
-_home_user_git_garmin_source_OpsDashboardView_mc_117_8_126_8_if_end:
-_home_user_git_garmin_source_OpsDashboardView_mc_98_26_127_4_stop:
+        %tmp.39 = lgetv %dc;
+        symbol [ dc %tmp.39 117 8 10 ];
+        symbol [ drawText %tmp.40 117 11 19 ];
+        %tmp.40 = getv function %tmp.39 :drawText;
+        %tmp.41 = lgetv %w.4;
+        symbol [ w %tmp.41 117 20 21 ];
+        %tmp.42 = 2;
+        %tmp.43 = div %tmp.41 %tmp.42;
+        %tmp.44 = lgetv %h.5;
+        symbol [ h %tmp.44 117 25 26 ];
+        %tmp.45 = 2;
+        %tmp.46 = div %tmp.44 %tmp.45;
+        %tmp.47 = lgetv %h.5;
+        symbol [ h %tmp.47 117 32 33 ];
+        %tmp.48 = 0.1;
+        %tmp.49 = mul %tmp.47 %tmp.48;
+        %tmp.50 = sub %tmp.46 %tmp.49;
+        symbol [ fontMGRS %tmp.52 117 42 50 ];
+        %tmp.52 = getv ? :fontMGRS;
+        %tmp.53 = lgetv %coordString.2;
+        symbol [ coordString %tmp.53 117 52 63 ];
+        symbol [ Graphics %tmp.54 117 65 73 ];
+        %tmp.54 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.55 117 74 93 ];
+        %tmp.55 = getv %tmp.54 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.39 %tmp.40(%tmp.43, %tmp.50, %tmp.52, %tmp.53, %tmp.55);
+_home_user_git_garmin_source_OpsDashboardView_mc_101_26_118_4_stop:
     }
-    [ @file = "/home/user/git/garmin/source/OpsDashboardView.mc"; @line = 130; @symbol_functiondef = [drawPressureGraph,130,13,30]; @symbol_param<0> = [dc,130,31,33]; ]
+    [ @file = "/home/user/git/garmin/source/OpsDashboardView.mc"; @line = 121; @symbol_functiondef = [drawPressureGraph,121,13,30]; @symbol_param<0> = [dc,121,31,33]; ]
     function drawPressureGraph(dc) {
-_home_user_git_garmin_source_OpsDashboardView_mc_130_35_155_4_start:
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 132 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_130_35_155_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_130_35_155_4_stop" ]
-        %history.1 = local;
-        symbol [ history %history.1 132 12 19 ];
-        symbol [ SensorHistory %tmp.1 132 22 35 ];
-        %tmp.1 = getm $.Toybox.SensorHistory;
-        symbol [ getPressureHistory %tmp.2 132 36 54 ];
-        %tmp.2 = getv function %tmp.1 :getPressureHistory;
-        %tmp.3 = newd 2;
-        %tmp.5 = const :period;
-        symbol [ period %tmp.5 132 57 63 const ];
-        %tmp.6 = 20;
-        %tmp.7 = dup %tmp.3;
-        %tmp.8 = aputv %tmp.7 %tmp.5 %tmp.6;
-        %tmp.10 = const :order;
-        symbol [ order %tmp.10 132 72 77 const ];
-        symbol [ SensorHistory %tmp.11 132 81 94 ];
-        %tmp.11 = getm $.Toybox.SensorHistory;
-        symbol [ ORDER_NEWEST_FIRST %tmp.12 132 95 113 ];
-        %tmp.12 = getv %tmp.11 :ORDER_NEWEST_FIRST;
-        %tmp.13 = dup %tmp.8;
-        %tmp.14 = aputv %tmp.13 %tmp.10 %tmp.12;
-        %tmp.15 = invoke %tmp.1 %tmp.2(%tmp.14);
-        lputv %history.1 %tmp.15;
-        symbol [ history %history.1 132 12 19 ];
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 135 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_130_35_155_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_130_35_155_4_stop" ]
-        %width.2 = local;
-        symbol [ width %width.2 135 12 17 ];
-        %tmp.16 = lgetv %dc;
-        symbol [ dc %tmp.16 135 20 22 ];
-        symbol [ getWidth %tmp.17 135 23 31 ];
-        %tmp.17 = getv function %tmp.16 :getWidth;
-        %tmp.18 = invoke %tmp.16 %tmp.17();
-        lputv %width.2 %tmp.18;
-        symbol [ width %width.2 135 12 17 ];
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 136 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_130_35_155_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_130_35_155_4_stop" ]
-        %height.3 = local;
-        symbol [ height %height.3 136 12 18 ];
-        %tmp.19 = lgetv %dc;
-        symbol [ dc %tmp.19 136 21 23 ];
-        symbol [ getHeight %tmp.20 136 24 33 ];
-        %tmp.20 = getv function %tmp.19 :getHeight;
-        %tmp.21 = invoke %tmp.19 %tmp.20();
-        lputv %height.3 %tmp.21;
-        symbol [ height %height.3 136 12 18 ];
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 137 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_130_35_155_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_130_35_155_4_stop" ]
-        %bottom.4 = local;
-        symbol [ bottom %bottom.4 137 12 18 ];
-        %tmp.22 = lgetv %height.3;
-        symbol [ height %tmp.22 137 21 27 ];
-        %tmp.23 = 10;
-        %tmp.24 = sub %tmp.22 %tmp.23;
-        lputv %bottom.4 %tmp.24;
-        symbol [ bottom %bottom.4 137 12 18 ];
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 138 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_130_35_155_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_130_35_155_4_stop" ]
-        %graphHeight.5 = local;
-        symbol [ graphHeight %graphHeight.5 138 12 23 ];
-        %tmp.25 = 40;
-        lputv %graphHeight.5 %tmp.25;
-        symbol [ graphHeight %graphHeight.5 138 12 23 ];
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 140 8 ]
-        %tmp.26 = lgetv %dc;
-        symbol [ dc %tmp.26 140 8 10 ];
-        symbol [ setColor %tmp.27 140 11 19 ];
-        %tmp.27 = getv function %tmp.26 :setColor;
-        symbol [ Graphics %tmp.28 140 20 28 ];
-        %tmp.28 = getm $.Toybox.Graphics;
-        symbol [ COLOR_DK_GRAY %tmp.29 140 29 42 ];
-        %tmp.29 = getv %tmp.28 :COLOR_DK_GRAY;
-        symbol [ Graphics %tmp.30 140 44 52 ];
-        %tmp.30 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.31 140 53 70 ];
-        %tmp.31 = getv %tmp.30 :COLOR_TRANSPARENT;
-        invoke %tmp.26 %tmp.27(%tmp.29, %tmp.31);
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 141 8 ]
-        %tmp.32 = lgetv %dc;
-        symbol [ dc %tmp.32 141 8 10 ];
-        symbol [ drawLine %tmp.33 141 11 19 ];
-        %tmp.33 = getv function %tmp.32 :drawLine;
-        %tmp.34 = 20;
-        %tmp.35 = lgetv %bottom.4;
-        symbol [ bottom %tmp.35 141 24 30 ];
-        %tmp.36 = lgetv %width.2;
-        symbol [ width %tmp.36 141 32 37 ];
-        %tmp.37 = 20;
-        %tmp.38 = sub %tmp.36 %tmp.37;
-        %tmp.39 = lgetv %bottom.4;
-        symbol [ bottom %tmp.39 141 42 48 ];
-        invoke %tmp.32 %tmp.33(%tmp.34, %tmp.35, %tmp.38, %tmp.39);
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 144 8 ]
-        %tmp.40 = lgetv %dc;
-        symbol [ dc %tmp.40 144 8 10 ];
-        symbol [ setColor %tmp.41 144 11 19 ];
-        %tmp.41 = getv function %tmp.40 :setColor;
-        symbol [ Graphics %tmp.42 144 20 28 ];
-        %tmp.42 = getm $.Toybox.Graphics;
-        symbol [ COLOR_RED %tmp.43 144 29 38 ];
-        %tmp.43 = getv %tmp.42 :COLOR_RED;
-        symbol [ Graphics %tmp.44 144 40 48 ];
-        %tmp.44 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.45 144 49 66 ];
-        %tmp.45 = getv %tmp.44 :COLOR_TRANSPARENT;
-        invoke %tmp.40 %tmp.41(%tmp.43, %tmp.45);
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 145 8 ]
-        %tmp.46 = lgetv %dc;
-        symbol [ dc %tmp.46 145 8 10 ];
-        symbol [ drawLine %tmp.47 145 11 19 ];
-        %tmp.47 = getv function %tmp.46 :drawLine;
-        %tmp.48 = 20;
-        %tmp.49 = lgetv %bottom.4;
-        symbol [ bottom %tmp.49 145 24 30 ];
-        %tmp.50 = 10;
-        %tmp.51 = sub %tmp.49 %tmp.50;
-        %tmp.52 = lgetv %width.2;
-        symbol [ width %tmp.52 145 35 40 ];
-        %tmp.53 = 2;
-        %tmp.54 = div %tmp.52 %tmp.53;
-        %tmp.55 = lgetv %bottom.4;
-        symbol [ bottom %tmp.55 145 44 50 ];
-        %tmp.56 = 20;
-        %tmp.57 = sub %tmp.55 %tmp.56;
-        invoke %tmp.46 %tmp.47(%tmp.48, %tmp.51, %tmp.54, %tmp.57);
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 146 8 ]
-        %tmp.58 = lgetv %dc;
-        symbol [ dc %tmp.58 146 8 10 ];
-        symbol [ drawLine %tmp.59 146 11 19 ];
-        %tmp.59 = getv function %tmp.58 :drawLine;
-        %tmp.60 = lgetv %width.2;
-        symbol [ width %tmp.60 146 20 25 ];
-        %tmp.61 = 2;
-        %tmp.62 = div %tmp.60 %tmp.61;
-        %tmp.63 = lgetv %bottom.4;
-        symbol [ bottom %tmp.63 146 29 35 ];
-        %tmp.64 = 20;
-        %tmp.65 = sub %tmp.63 %tmp.64;
-        %tmp.66 = lgetv %width.2;
-        symbol [ width %tmp.66 146 40 45 ];
-        %tmp.67 = 20;
-        %tmp.68 = sub %tmp.66 %tmp.67;
-        %tmp.69 = lgetv %bottom.4;
-        symbol [ bottom %tmp.69 146 50 56 ];
-        %tmp.70 = 5;
-        %tmp.71 = sub %tmp.69 %tmp.70;
-        invoke %tmp.58 %tmp.59(%tmp.62, %tmp.65, %tmp.68, %tmp.71);
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 149 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_130_35_155_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_130_35_155_4_stop" ]
-        %sample.6 = local;
-        symbol [ sample %sample.6 149 12 18 ];
-        %tmp.72 = lgetv %history.1;
-        symbol [ history %tmp.72 149 21 28 ];
-        symbol [ next %tmp.73 149 29 33 ];
-        %tmp.73 = getv function %tmp.72 :next;
-        %tmp.74 = invoke %tmp.72 %tmp.73();
-        lputv %sample.6 %tmp.74;
-        symbol [ sample %sample.6 149 12 18 ];
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 150 8 ]
-_home_user_git_garmin_source_OpsDashboardView_mc_150_8_154_8_if_stmt:
-_home_user_git_garmin_source_OpsDashboardView_mc_150_12_150_45_begin:
-        %tmp.75 = lgetv %sample.6;
-        symbol [ sample %tmp.75 150 12 18 ];
-        %tmp.76 = null;
-        %tmp.77 = ne %tmp.75 %tmp.76;
-        bf %tmp.77 @_home_user_git_garmin_source_OpsDashboardView_mc_150_8_154_8_if_end;
-_home_user_git_garmin_source_OpsDashboardView_mc_150_30_150_45_true:
-        %tmp.78 = lgetv %sample.6;
-        symbol [ sample %tmp.78 150 30 36 ];
-        %tmp.79 = as %tmp.78 { (!Null) };
-        symbol [ data %tmp.80 150 37 41 ];
-        %tmp.80 = getv %tmp.79 :data;
-        %tmp.81 = null;
-        %tmp.82 = ne %tmp.80 %tmp.81;
-        push %tmp.82;
-_home_user_git_garmin_source_OpsDashboardView_mc_150_30_150_45_end:
-        %tmp.83 = phi [%tmp.77 @_home_user_git_garmin_source_OpsDashboardView_mc_150_12_150_45_begin] [%tmp.82 @_home_user_git_garmin_source_OpsDashboardView_mc_150_30_150_45_true] [%tmp.83 @_home_user_git_garmin_source_OpsDashboardView_mc_150_30_150_45_end];
-        bf %tmp.83 @_home_user_git_garmin_source_OpsDashboardView_mc_150_8_154_8_if_end;
-_home_user_git_garmin_source_OpsDashboardView_mc_150_8_154_8_if_true:
-_home_user_git_garmin_source_OpsDashboardView_mc_150_51_154_8_start:
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 151 12 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_150_51_154_8_start" "_home_user_git_garmin_source_OpsDashboardView_mc_150_51_154_8_stop" ]
-        %val.7 = local;
-        symbol [ val %val.7 151 16 19 ];
-        %tmp.84 = lgetv %sample.6;
-        symbol [ sample %tmp.84 151 23 29 ];
-        %tmp.85 = as %tmp.84 { (!Null) };
-        symbol [ data %tmp.86 151 30 34 ];
-        %tmp.86 = getv %tmp.85 :data;
-        %tmp.87 = 100;
-        %tmp.88 = div %tmp.86 %tmp.87;
-        symbol [ format %tmp.89 151 42 48 ];
-        %tmp.89 = getv function %tmp.88 :format;
-        %tmp.90 = "%d";
-        %tmp.91 = invoke %tmp.88 %tmp.89(%tmp.90);
-        lputv %val.7 %tmp.91;
-        symbol [ val %val.7 151 16 19 ];
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 152 12 ]
-        %tmp.92 = lgetv %dc;
-        symbol [ dc %tmp.92 152 12 14 ];
-        symbol [ setColor %tmp.93 152 15 23 ];
-        %tmp.93 = getv function %tmp.92 :setColor;
-        symbol [ Graphics %tmp.94 152 24 32 ];
-        %tmp.94 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.95 152 33 44 ];
-        %tmp.95 = getv %tmp.94 :COLOR_WHITE;
-        symbol [ Graphics %tmp.96 152 46 54 ];
-        %tmp.96 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.97 152 55 72 ];
-        %tmp.97 = getv %tmp.96 :COLOR_TRANSPARENT;
-        invoke %tmp.92 %tmp.93(%tmp.95, %tmp.97);
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 153 12 ]
-        %tmp.98 = lgetv %dc;
-        symbol [ dc %tmp.98 153 12 14 ];
-        symbol [ drawText %tmp.99 153 15 23 ];
-        %tmp.99 = getv function %tmp.98 :drawText;
-        %tmp.100 = lgetv %width.2;
-        symbol [ width %tmp.100 153 24 29 ];
-        %tmp.101 = 2;
-        %tmp.102 = div %tmp.100 %tmp.101;
-        %tmp.103 = lgetv %bottom.4;
-        symbol [ bottom %tmp.103 153 33 39 ];
-        %tmp.104 = lgetv %graphHeight.5;
-        symbol [ graphHeight %tmp.104 153 42 53 ];
-        %tmp.105 = sub %tmp.103 %tmp.104;
-        %tmp.106 = 5;
-        %tmp.107 = sub %tmp.105 %tmp.106;
-        symbol [ fontSmall %tmp.109 153 59 68 ];
-        %tmp.109 = getv ? :fontSmall;
-        %tmp.110 = lgetv %val.7;
-        symbol [ val %tmp.110 153 70 73 ];
-        %tmp.111 = " hPa";
-        %tmp.112 = add %tmp.110 %tmp.111;
-        symbol [ Graphics %tmp.113 153 84 92 ];
-        %tmp.113 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.114 153 93 112 ];
-        %tmp.114 = getv %tmp.113 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.98 %tmp.99(%tmp.102, %tmp.107, %tmp.109, %tmp.112, %tmp.114);
-_home_user_git_garmin_source_OpsDashboardView_mc_150_51_154_8_stop:
-        goto @_home_user_git_garmin_source_OpsDashboardView_mc_150_8_154_8_if_end;
-_home_user_git_garmin_source_OpsDashboardView_mc_150_8_154_8_if_end:
-_home_user_git_garmin_source_OpsDashboardView_mc_130_35_155_4_stop:
-    }
-    [ @file = "/home/user/git/garmin/source/OpsDashboardView.mc"; @line = 158; @symbol_functiondef = [drawEyeWindow,158,13,26]; @symbol_param<0> = [dc,158,27,29]; ]
-    function drawEyeWindow(dc) {
-_home_user_git_garmin_source_OpsDashboardView_mc_158_31_175_4_start:
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 163 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_158_31_175_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_158_31_175_4_stop" ]
-        %eyeX.1 = local;
-        symbol [ eyeX %eyeX.1 163 12 16 ];
+_home_user_git_garmin_source_OpsDashboardView_mc_121_35_143_4_start:
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 122 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_121_35_143_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_121_35_143_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 122 12 17 ];
         %tmp.1 = lgetv %dc;
-        symbol [ dc %tmp.1 163 19 21 ];
-        symbol [ getWidth %tmp.2 163 22 30 ];
+        symbol [ dc %tmp.1 122 20 22 ];
+        symbol [ getWidth %tmp.2 122 23 31 ];
         %tmp.2 = getv function %tmp.1 :getWidth;
         %tmp.3 = invoke %tmp.1 %tmp.2();
-        %tmp.4 = 40;
-        %tmp.5 = sub %tmp.3 %tmp.4;
-        lputv %eyeX.1 %tmp.5;
-        symbol [ eyeX %eyeX.1 163 12 16 ];
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 164 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_158_31_175_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_158_31_175_4_stop" ]
-        %eyeY.2 = local;
-        symbol [ eyeY %eyeY.2 164 12 16 ];
-        %tmp.6 = 40;
-        lputv %eyeY.2 %tmp.6;
-        symbol [ eyeY %eyeY.2 164 12 16 ];
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 165 8 ]
-        [ "_home_user_git_garmin_source_OpsDashboardView_mc_158_31_175_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_158_31_175_4_stop" ]
-        %r.3 = local;
-        symbol [ r %r.3 165 12 13 ];
-        %tmp.7 = 25;
-        lputv %r.3 %tmp.7;
-        symbol [ r %r.3 165 12 13 ];
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 168 8 ]
-        %tmp.8 = lgetv %dc;
-        symbol [ dc %tmp.8 168 8 10 ];
-        symbol [ setColor %tmp.9 168 11 19 ];
-        %tmp.9 = getv function %tmp.8 :setColor;
-        symbol [ Graphics %tmp.10 168 20 28 ];
-        %tmp.10 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.11 168 29 40 ];
-        %tmp.11 = getv %tmp.10 :COLOR_WHITE;
-        symbol [ Graphics %tmp.12 168 42 50 ];
-        %tmp.12 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.13 168 51 68 ];
-        %tmp.13 = getv %tmp.12 :COLOR_TRANSPARENT;
-        invoke %tmp.8 %tmp.9(%tmp.11, %tmp.13);
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 169 8 ]
-        %tmp.14 = lgetv %dc;
-        symbol [ dc %tmp.14 169 8 10 ];
-        symbol [ drawCircle %tmp.15 169 11 21 ];
-        %tmp.15 = getv function %tmp.14 :drawCircle;
-        %tmp.16 = lgetv %eyeX.1;
-        symbol [ eyeX %tmp.16 169 22 26 ];
-        %tmp.17 = lgetv %eyeY.2;
-        symbol [ eyeY %tmp.17 169 28 32 ];
-        %tmp.18 = 10;
-        invoke %tmp.14 %tmp.15(%tmp.16, %tmp.17, %tmp.18);
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 170 8 ]
+        lputv %width.1 %tmp.3;
+        symbol [ width %width.1 122 12 17 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 123 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_121_35_143_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_121_35_143_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 123 12 18 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 123 21 23 ];
+        symbol [ getHeight %tmp.5 123 24 33 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %height.2 %tmp.6;
+        symbol [ height %height.2 123 12 18 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 124 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_121_35_143_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_121_35_143_4_stop" ]
+        %bottom.3 = local;
+        symbol [ bottom %bottom.3 124 12 18 ];
+        %tmp.7 = lgetv %height.2;
+        symbol [ height %tmp.7 124 21 27 ];
+        %tmp.8 = 0.85;
+        %tmp.9 = mul %tmp.7 %tmp.8;
+        lputv %bottom.3 %tmp.9;
+        symbol [ bottom %bottom.3 124 12 18 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 125 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_121_35_143_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_121_35_143_4_stop" ]
+        %graphHeight.4 = local;
+        symbol [ graphHeight %graphHeight.4 125 12 23 ];
+        %tmp.10 = lgetv %height.2;
+        symbol [ height %tmp.10 125 26 32 ];
+        %tmp.11 = 0.15;
+        %tmp.12 = mul %tmp.10 %tmp.11;
+        lputv %graphHeight.4 %tmp.12;
+        symbol [ graphHeight %graphHeight.4 125 12 23 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 127 8 ]
+        %tmp.13 = lgetv %dc;
+        symbol [ dc %tmp.13 127 8 10 ];
+        symbol [ setColor %tmp.14 127 11 19 ];
+        %tmp.14 = getv function %tmp.13 :setColor;
+        symbol [ Graphics %tmp.15 127 20 28 ];
+        %tmp.15 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.16 127 29 42 ];
+        %tmp.16 = getv %tmp.15 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.17 127 44 52 ];
+        %tmp.17 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.18 127 53 70 ];
+        %tmp.18 = getv %tmp.17 :COLOR_TRANSPARENT;
+        invoke %tmp.13 %tmp.14(%tmp.16, %tmp.18);
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 128 8 ]
         %tmp.19 = lgetv %dc;
-        symbol [ dc %tmp.19 170 8 10 ];
-        symbol [ fillCircle %tmp.20 170 11 21 ];
-        %tmp.20 = getv function %tmp.19 :fillCircle;
-        %tmp.21 = lgetv %eyeX.1;
-        symbol [ eyeX %tmp.21 170 22 26 ];
-        %tmp.22 = 3;
-        %tmp.23 = add %tmp.21 %tmp.22;
-        %tmp.24 = lgetv %eyeY.2;
-        symbol [ eyeY %tmp.24 170 32 36 ];
-        %tmp.25 = 8;
-        invoke %tmp.19 %tmp.20(%tmp.23, %tmp.24, %tmp.25);
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 173 8 ]
-        %tmp.26 = lgetv %dc;
-        symbol [ dc %tmp.26 173 8 10 ];
-        symbol [ setPenWidth %tmp.27 173 11 22 ];
-        %tmp.27 = getv function %tmp.26 :setPenWidth;
-        %tmp.28 = 3;
-        invoke %tmp.26 %tmp.27(%tmp.28);
-[ "/home/user/git/garmin/source/OpsDashboardView.mc" 174 8 ]
+        symbol [ dc %tmp.19 128 8 10 ];
+        symbol [ drawLine %tmp.20 128 11 19 ];
+        %tmp.20 = getv function %tmp.19 :drawLine;
+        %tmp.21 = lgetv %width.1;
+        symbol [ width %tmp.21 128 20 25 ];
+        %tmp.22 = 0.2;
+        %tmp.23 = mul %tmp.21 %tmp.22;
+        %tmp.24 = lgetv %bottom.3;
+        symbol [ bottom %tmp.24 128 33 39 ];
+        %tmp.25 = lgetv %width.1;
+        symbol [ width %tmp.25 128 41 46 ];
+        %tmp.26 = 0.8;
+        %tmp.27 = mul %tmp.25 %tmp.26;
+        %tmp.28 = lgetv %bottom.3;
+        symbol [ bottom %tmp.28 128 54 60 ];
+        invoke %tmp.19 %tmp.20(%tmp.23, %tmp.24, %tmp.27, %tmp.28);
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 131 8 ]
         %tmp.29 = lgetv %dc;
-        symbol [ dc %tmp.29 174 8 10 ];
-        symbol [ drawArc %tmp.30 174 11 18 ];
-        %tmp.30 = getv function %tmp.29 :drawArc;
-        %tmp.31 = lgetv %eyeX.1;
-        symbol [ eyeX %tmp.31 174 19 23 ];
-        %tmp.32 = lgetv %eyeY.2;
-        symbol [ eyeY %tmp.32 174 25 29 ];
-        %tmp.33 = lgetv %r.3;
-        symbol [ r %tmp.33 174 31 32 ];
-        symbol [ Graphics %tmp.34 174 34 42 ];
-        %tmp.34 = getm $.Toybox.Graphics;
-        symbol [ ARC_CLOCKWISE %tmp.35 174 43 56 ];
-        %tmp.35 = getv %tmp.34 :ARC_CLOCKWISE;
-        %tmp.36 = 90;
-        %tmp.37 = 0;
-        invoke %tmp.29 %tmp.30(%tmp.31, %tmp.32, %tmp.33, %tmp.35, %tmp.36, %tmp.37);
-_home_user_git_garmin_source_OpsDashboardView_mc_158_31_175_4_stop:
+        symbol [ dc %tmp.29 131 8 10 ];
+        symbol [ setColor %tmp.30 131 11 19 ];
+        %tmp.30 = getv function %tmp.29 :setColor;
+        symbol [ Graphics %tmp.31 131 20 28 ];
+        %tmp.31 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.32 131 29 38 ];
+        %tmp.32 = getv %tmp.31 :COLOR_RED;
+        symbol [ Graphics %tmp.33 131 40 48 ];
+        %tmp.33 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.34 131 49 66 ];
+        %tmp.34 = getv %tmp.33 :COLOR_TRANSPARENT;
+        invoke %tmp.29 %tmp.30(%tmp.32, %tmp.34);
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 132 8 ]
+        %tmp.35 = lgetv %dc;
+        symbol [ dc %tmp.35 132 8 10 ];
+        symbol [ drawLine %tmp.36 132 11 19 ];
+        %tmp.36 = getv function %tmp.35 :drawLine;
+        %tmp.37 = lgetv %width.1;
+        symbol [ width %tmp.37 132 20 25 ];
+        %tmp.38 = 0.2;
+        %tmp.39 = mul %tmp.37 %tmp.38;
+        %tmp.40 = lgetv %bottom.3;
+        symbol [ bottom %tmp.40 132 33 39 ];
+        %tmp.41 = lgetv %graphHeight.4;
+        symbol [ graphHeight %tmp.41 132 43 54 ];
+        %tmp.42 = 0.3;
+        %tmp.43 = mul %tmp.41 %tmp.42;
+        %tmp.44 = sub %tmp.40 %tmp.43;
+        %tmp.45 = lgetv %width.1;
+        symbol [ width %tmp.45 132 61 66 ];
+        %tmp.46 = 0.5;
+        %tmp.47 = mul %tmp.45 %tmp.46;
+        %tmp.48 = lgetv %bottom.3;
+        symbol [ bottom %tmp.48 132 74 80 ];
+        %tmp.49 = lgetv %graphHeight.4;
+        symbol [ graphHeight %tmp.49 132 84 95 ];
+        %tmp.50 = 0.6;
+        %tmp.51 = mul %tmp.49 %tmp.50;
+        %tmp.52 = sub %tmp.48 %tmp.51;
+        invoke %tmp.35 %tmp.36(%tmp.39, %tmp.44, %tmp.47, %tmp.52);
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 133 8 ]
+        %tmp.53 = lgetv %dc;
+        symbol [ dc %tmp.53 133 8 10 ];
+        symbol [ drawLine %tmp.54 133 11 19 ];
+        %tmp.54 = getv function %tmp.53 :drawLine;
+        %tmp.55 = lgetv %width.1;
+        symbol [ width %tmp.55 133 20 25 ];
+        %tmp.56 = 0.5;
+        %tmp.57 = mul %tmp.55 %tmp.56;
+        %tmp.58 = lgetv %bottom.3;
+        symbol [ bottom %tmp.58 133 33 39 ];
+        %tmp.59 = lgetv %graphHeight.4;
+        symbol [ graphHeight %tmp.59 133 43 54 ];
+        %tmp.60 = 0.6;
+        %tmp.61 = mul %tmp.59 %tmp.60;
+        %tmp.62 = sub %tmp.58 %tmp.61;
+        %tmp.63 = lgetv %width.1;
+        symbol [ width %tmp.63 133 61 66 ];
+        %tmp.64 = 0.8;
+        %tmp.65 = mul %tmp.63 %tmp.64;
+        %tmp.66 = lgetv %bottom.3;
+        symbol [ bottom %tmp.66 133 74 80 ];
+        %tmp.67 = lgetv %graphHeight.4;
+        symbol [ graphHeight %tmp.67 133 84 95 ];
+        %tmp.68 = 0.2;
+        %tmp.69 = mul %tmp.67 %tmp.68;
+        %tmp.70 = sub %tmp.66 %tmp.69;
+        invoke %tmp.53 %tmp.54(%tmp.57, %tmp.62, %tmp.65, %tmp.70);
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 136 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_121_35_143_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_121_35_143_4_stop" ]
+        %history.5 = local;
+        symbol [ history %history.5 136 12 19 ];
+        symbol [ SensorHistory %tmp.71 136 22 35 ];
+        %tmp.71 = getm $.Toybox.SensorHistory;
+        symbol [ getPressureHistory %tmp.72 136 36 54 ];
+        %tmp.72 = getv function %tmp.71 :getPressureHistory;
+        %tmp.73 = newd 2;
+        %tmp.75 = const :period;
+        symbol [ period %tmp.75 136 57 63 const ];
+        %tmp.76 = 1;
+        %tmp.77 = dup %tmp.73;
+        %tmp.78 = aputv %tmp.77 %tmp.75 %tmp.76;
+        %tmp.80 = const :order;
+        symbol [ order %tmp.80 136 71 76 const ];
+        symbol [ SensorHistory %tmp.81 136 80 93 ];
+        %tmp.81 = getm $.Toybox.SensorHistory;
+        symbol [ ORDER_NEWEST_FIRST %tmp.82 136 94 112 ];
+        %tmp.82 = getv %tmp.81 :ORDER_NEWEST_FIRST;
+        %tmp.83 = dup %tmp.78;
+        %tmp.84 = aputv %tmp.83 %tmp.80 %tmp.82;
+        %tmp.85 = invoke %tmp.71 %tmp.72(%tmp.84);
+        lputv %history.5 %tmp.85;
+        symbol [ history %history.5 136 12 19 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 137 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_121_35_143_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_121_35_143_4_stop" ]
+        %sample.6 = local;
+        symbol [ sample %sample.6 137 12 18 ];
+        %tmp.86 = lgetv %history.5;
+        symbol [ history %tmp.86 137 21 28 ];
+        symbol [ next %tmp.87 137 29 33 ];
+        %tmp.87 = getv function %tmp.86 :next;
+        %tmp.88 = invoke %tmp.86 %tmp.87();
+        lputv %sample.6 %tmp.88;
+        symbol [ sample %sample.6 137 12 18 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 138 8 ]
+_home_user_git_garmin_source_OpsDashboardView_mc_138_8_142_8_if_stmt:
+_home_user_git_garmin_source_OpsDashboardView_mc_138_12_138_45_begin:
+        %tmp.89 = lgetv %sample.6;
+        symbol [ sample %tmp.89 138 12 18 ];
+        %tmp.90 = null;
+        %tmp.91 = ne %tmp.89 %tmp.90;
+        bf %tmp.91 @_home_user_git_garmin_source_OpsDashboardView_mc_138_8_142_8_if_end;
+_home_user_git_garmin_source_OpsDashboardView_mc_138_30_138_45_true:
+        %tmp.92 = lgetv %sample.6;
+        symbol [ sample %tmp.92 138 30 36 ];
+        %tmp.93 = as %tmp.92 { (!Null) };
+        symbol [ data %tmp.94 138 37 41 ];
+        %tmp.94 = getv %tmp.93 :data;
+        %tmp.95 = null;
+        %tmp.96 = ne %tmp.94 %tmp.95;
+        push %tmp.96;
+_home_user_git_garmin_source_OpsDashboardView_mc_138_30_138_45_end:
+        %tmp.97 = phi [%tmp.91 @_home_user_git_garmin_source_OpsDashboardView_mc_138_12_138_45_begin] [%tmp.96 @_home_user_git_garmin_source_OpsDashboardView_mc_138_30_138_45_true] [%tmp.97 @_home_user_git_garmin_source_OpsDashboardView_mc_138_30_138_45_end];
+        bf %tmp.97 @_home_user_git_garmin_source_OpsDashboardView_mc_138_8_142_8_if_end;
+_home_user_git_garmin_source_OpsDashboardView_mc_138_8_142_8_if_true:
+_home_user_git_garmin_source_OpsDashboardView_mc_138_51_142_8_start:
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 139 12 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_138_51_142_8_start" "_home_user_git_garmin_source_OpsDashboardView_mc_138_51_142_8_stop" ]
+        %val.7 = local;
+        symbol [ val %val.7 139 16 19 ];
+        %tmp.98 = lgetv %sample.6;
+        symbol [ sample %tmp.98 139 23 29 ];
+        %tmp.99 = as %tmp.98 { (!Null) };
+        symbol [ data %tmp.100 139 30 34 ];
+        %tmp.100 = getv %tmp.99 :data;
+        %tmp.101 = 100;
+        %tmp.102 = div %tmp.100 %tmp.101;
+        symbol [ format %tmp.103 139 42 48 ];
+        %tmp.103 = getv function %tmp.102 :format;
+        %tmp.104 = "%d";
+        %tmp.105 = invoke %tmp.102 %tmp.103(%tmp.104);
+        lputv %val.7 %tmp.105;
+        symbol [ val %val.7 139 16 19 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 140 12 ]
+        %tmp.106 = lgetv %dc;
+        symbol [ dc %tmp.106 140 12 14 ];
+        symbol [ setColor %tmp.107 140 15 23 ];
+        %tmp.107 = getv function %tmp.106 :setColor;
+        symbol [ Graphics %tmp.108 140 24 32 ];
+        %tmp.108 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.109 140 33 44 ];
+        %tmp.109 = getv %tmp.108 :COLOR_WHITE;
+        symbol [ Graphics %tmp.110 140 46 54 ];
+        %tmp.110 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.111 140 55 72 ];
+        %tmp.111 = getv %tmp.110 :COLOR_TRANSPARENT;
+        invoke %tmp.106 %tmp.107(%tmp.109, %tmp.111);
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 141 12 ]
+        %tmp.112 = lgetv %dc;
+        symbol [ dc %tmp.112 141 12 14 ];
+        symbol [ drawText %tmp.113 141 15 23 ];
+        %tmp.113 = getv function %tmp.112 :drawText;
+        %tmp.114 = lgetv %width.1;
+        symbol [ width %tmp.114 141 24 29 ];
+        %tmp.115 = 2;
+        %tmp.116 = div %tmp.114 %tmp.115;
+        %tmp.117 = lgetv %bottom.3;
+        symbol [ bottom %tmp.117 141 33 39 ];
+        %tmp.118 = 5;
+        %tmp.119 = add %tmp.117 %tmp.118;
+        symbol [ fontSmall %tmp.121 141 45 54 ];
+        %tmp.121 = getv ? :fontSmall;
+        %tmp.122 = lgetv %val.7;
+        symbol [ val %tmp.122 141 56 59 ];
+        %tmp.123 = " hPa";
+        %tmp.124 = add %tmp.122 %tmp.123;
+        symbol [ Graphics %tmp.125 141 70 78 ];
+        %tmp.125 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.126 141 79 98 ];
+        %tmp.126 = getv %tmp.125 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.112 %tmp.113(%tmp.116, %tmp.119, %tmp.121, %tmp.124, %tmp.126);
+_home_user_git_garmin_source_OpsDashboardView_mc_138_51_142_8_stop:
+        goto @_home_user_git_garmin_source_OpsDashboardView_mc_138_8_142_8_if_end;
+_home_user_git_garmin_source_OpsDashboardView_mc_138_8_142_8_if_end:
+_home_user_git_garmin_source_OpsDashboardView_mc_121_35_143_4_stop:
+    }
+    [ @file = "/home/user/git/garmin/source/OpsDashboardView.mc"; @line = 146; @symbol_functiondef = [drawEyeWindow,146,13,26]; @symbol_param<0> = [dc,146,27,29]; ]
+    function drawEyeWindow(dc) {
+_home_user_git_garmin_source_OpsDashboardView_mc_146_31_163_4_start:
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 148 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_146_31_163_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_146_31_163_4_stop" ]
+        %w.1 = local;
+        symbol [ w %w.1 148 12 13 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 148 16 18 ];
+        symbol [ getWidth %tmp.2 148 19 27 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %w.1 %tmp.3;
+        symbol [ w %w.1 148 12 13 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 151 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_146_31_163_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_146_31_163_4_stop" ]
+        %eyeX.2 = local;
+        symbol [ eyeX %eyeX.2 151 12 16 ];
+        %tmp.4 = lgetv %w.1;
+        symbol [ w %tmp.4 151 19 20 ];
+        %tmp.5 = 0.77;
+        %tmp.6 = mul %tmp.4 %tmp.5;
+        lputv %eyeX.2 %tmp.6;
+        symbol [ eyeX %eyeX.2 151 12 16 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 152 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_146_31_163_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_146_31_163_4_stop" ]
+        %eyeY.3 = local;
+        symbol [ eyeY %eyeY.3 152 12 16 ];
+        %tmp.7 = lgetv %w.1;
+        symbol [ w %tmp.7 152 19 20 ];
+        %tmp.8 = 0.22;
+        %tmp.9 = mul %tmp.7 %tmp.8;
+        lputv %eyeY.3 %tmp.9;
+        symbol [ eyeY %eyeY.3 152 12 16 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 153 8 ]
+        [ "_home_user_git_garmin_source_OpsDashboardView_mc_146_31_163_4_start" "_home_user_git_garmin_source_OpsDashboardView_mc_146_31_163_4_stop" ]
+        %r.4 = local;
+        symbol [ r %r.4 153 12 13 ];
+        %tmp.10 = lgetv %w.1;
+        symbol [ w %tmp.10 153 16 17 ];
+        %tmp.11 = 0.14;
+        %tmp.12 = mul %tmp.10 %tmp.11;
+        lputv %r.4 %tmp.12;
+        symbol [ r %r.4 153 12 13 ];
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 156 8 ]
+        %tmp.13 = lgetv %dc;
+        symbol [ dc %tmp.13 156 8 10 ];
+        symbol [ setColor %tmp.14 156 11 19 ];
+        %tmp.14 = getv function %tmp.13 :setColor;
+        symbol [ Graphics %tmp.15 156 20 28 ];
+        %tmp.15 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.16 156 29 40 ];
+        %tmp.16 = getv %tmp.15 :COLOR_WHITE;
+        symbol [ Graphics %tmp.17 156 42 50 ];
+        %tmp.17 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.18 156 51 68 ];
+        %tmp.18 = getv %tmp.17 :COLOR_TRANSPARENT;
+        invoke %tmp.13 %tmp.14(%tmp.16, %tmp.18);
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 157 8 ]
+        %tmp.19 = lgetv %dc;
+        symbol [ dc %tmp.19 157 8 10 ];
+        symbol [ drawCircle %tmp.20 157 11 21 ];
+        %tmp.20 = getv function %tmp.19 :drawCircle;
+        %tmp.21 = lgetv %eyeX.2;
+        symbol [ eyeX %tmp.21 157 22 26 ];
+        %tmp.22 = lgetv %eyeY.3;
+        symbol [ eyeY %tmp.22 157 28 32 ];
+        %tmp.23 = lgetv %r.4;
+        symbol [ r %tmp.23 157 34 35 ];
+        %tmp.24 = 0.5;
+        %tmp.25 = mul %tmp.23 %tmp.24;
+        invoke %tmp.19 %tmp.20(%tmp.21, %tmp.22, %tmp.25);
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 158 8 ]
+        %tmp.26 = lgetv %dc;
+        symbol [ dc %tmp.26 158 8 10 ];
+        symbol [ fillCircle %tmp.27 158 11 21 ];
+        %tmp.27 = getv function %tmp.26 :fillCircle;
+        %tmp.28 = lgetv %eyeX.2;
+        symbol [ eyeX %tmp.28 158 22 26 ];
+        %tmp.29 = lgetv %r.4;
+        symbol [ r %tmp.29 158 30 31 ];
+        %tmp.30 = 0.1;
+        %tmp.31 = mul %tmp.29 %tmp.30;
+        %tmp.32 = add %tmp.28 %tmp.31;
+        %tmp.33 = lgetv %eyeY.3;
+        symbol [ eyeY %tmp.33 158 38 42 ];
+        %tmp.34 = lgetv %r.4;
+        symbol [ r %tmp.34 158 44 45 ];
+        %tmp.35 = 0.4;
+        %tmp.36 = mul %tmp.34 %tmp.35;
+        invoke %tmp.26 %tmp.27(%tmp.32, %tmp.33, %tmp.36);
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 161 8 ]
+        %tmp.37 = lgetv %dc;
+        symbol [ dc %tmp.37 161 8 10 ];
+        symbol [ setPenWidth %tmp.38 161 11 22 ];
+        %tmp.38 = getv function %tmp.37 :setPenWidth;
+        %tmp.39 = 3;
+        invoke %tmp.37 %tmp.38(%tmp.39);
+[ "/home/user/git/garmin/source/OpsDashboardView.mc" 162 8 ]
+        %tmp.40 = lgetv %dc;
+        symbol [ dc %tmp.40 162 8 10 ];
+        symbol [ drawArc %tmp.41 162 11 18 ];
+        %tmp.41 = getv function %tmp.40 :drawArc;
+        %tmp.42 = lgetv %eyeX.2;
+        symbol [ eyeX %tmp.42 162 19 23 ];
+        %tmp.43 = lgetv %eyeY.3;
+        symbol [ eyeY %tmp.43 162 25 29 ];
+        %tmp.44 = lgetv %r.4;
+        symbol [ r %tmp.44 162 31 32 ];
+        symbol [ Graphics %tmp.45 162 34 42 ];
+        %tmp.45 = getm $.Toybox.Graphics;
+        symbol [ ARC_CLOCKWISE %tmp.46 162 43 56 ];
+        %tmp.46 = getv %tmp.45 :ARC_CLOCKWISE;
+        %tmp.47 = 90;
+        %tmp.48 = 0;
+        invoke %tmp.40 %tmp.41(%tmp.42, %tmp.43, %tmp.44, %tmp.46, %tmp.47, %tmp.48);
+_home_user_git_garmin_source_OpsDashboardView_mc_146_31_163_4_stop:
     }
 }
 [ @file = "/home/user/git/garmin/source/OpsDashboardView.mc"; @line = 1; ]

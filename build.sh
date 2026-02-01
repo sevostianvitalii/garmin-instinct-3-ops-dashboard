@@ -1,12 +1,7 @@
 #!/bin/bash
 SDK_BIN="/home/user/.Garmin/ConnectIQ/Sdks/connectiq-sdk-lin-8.4.0-2025-12-03-5122605dc/bin"
 
-# Build specifically for the device likely used (Instinct 3 Solar is common, or just build generic export)
-# Using -e (export) creates an .iq file, but for sideloading we need a .prg
-# We must specify the EXACT target device for a PRG sideload.
-# A .prg built for 'instinct2' WILL NOT RUN on 'instinct3'.
-
-echo "Building for Instinct 3 Solar 45mm..."
+echo "Building for Instinct 3 Solar 45mm (Standard I3)..."
 $SDK_BIN/monkeyc \
     -o OpsDashboard_I3Solar.prg \
     -f monkey.jungle \
@@ -14,12 +9,21 @@ $SDK_BIN/monkeyc \
     -d instinct3solar45mm \
     -w
 
-echo "Building for Instinct 2..."
+echo "Building for Instinct 2X (50mm)..."
+# User may have an I2X which is 50mm, sometimes confused with I3
 $SDK_BIN/monkeyc \
-    -o OpsDashboard.prg \
+    -o OpsDashboard_I2X.prg \
     -f monkey.jungle \
     -y developer_key.der \
-    -d instinct2 \
+    -d instinct2x \
     -w
 
-echo "Done. Use OpsDashboard_I3Solar.prg for Instinct 3 Solar."
+echo "Building for Instinct 3 AMOLED 50mm (High Res)..."
+$SDK_BIN/monkeyc \
+    -o OpsDashboard_I3Amoled50.prg \
+    -f monkey.jungle \
+    -y developer_key.der \
+    -d instinct3amoled50mm \
+    -w
+
+echo "Done. Please choose the PRG that matches your device."

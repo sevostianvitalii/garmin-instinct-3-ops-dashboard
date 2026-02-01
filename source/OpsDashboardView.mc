@@ -57,40 +57,43 @@ class OpsDashboardView extends WatchUi.View {
         var settings = System.getDeviceSettings();
         var isStealth = true;
         
-        var x = dc.getWidth() / 2;
-        var y = 25; // Top area
+        var w = dc.getWidth();
+        var h = dc.getHeight();
+        var cx = w / 2;
+        var y = h * 0.15; // 15% down (Top area)
+        var iconOffset = w * 0.12; // Spread icons by 12% width
+        var r = w * 0.025; // Radius ~2.5%
         
-        // Icons (Simulated with text/circles for MVP if no custom font)
+        // Icons
         // BT
         if (settings.phoneConnected) {
             dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_TRANSPARENT);
-            dc.fillCircle(x - 20, y, 4); // BT Indicator
+            dc.fillCircle(cx - iconOffset, y, r); // BT Indicator
             isStealth = false;
         } else {
             dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
-            dc.drawCircle(x - 20, y, 4);
+            dc.drawCircle(cx - iconOffset, y, r);
         }
 
-        // Tones/Vibe (Simplified to just Vibe or skip if deprecated)
-        // tonesEnabled is often unavailable in newer SDKs for WatchFaces/Widgets directly without permission or specific object
+        // Tones/Vibe
         if (settings.vibrateOn) {
             dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_TRANSPARENT);
-            dc.fillCircle(x, y - 5, 4); // Sound/Vibe Indicator
+            dc.fillCircle(cx, y - (r*1.2), r); // Slightly higher or center
             isStealth = false;
         } else {
             dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
-            dc.drawCircle(x, y - 5, 4);
+            dc.drawCircle(cx, y - (r*1.2), r);
         }
         
-        // GPS (Check if position info is recent)
+        // GPS
         var info = Position.getInfo();
         if (info.accuracy > Position.QUALITY_POOR) {
              dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
-             dc.fillCircle(x + 20, y, 4); // GPS Indicator
-             isStealth = false; // GPS is active/tracking
+             dc.fillCircle(cx + iconOffset, y, r); 
+             isStealth = false; 
         } else {
              dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
-             dc.drawCircle(x + 20, y, 4);
+             dc.drawCircle(cx + iconOffset, y, r);
         }
     }
 
@@ -100,77 +103,62 @@ class OpsDashboardView extends WatchUi.View {
         var coordString = "NO GPS";
         
         if (info != null && info.accuracy > Position.QUALITY_NOT_AVAILABLE) {
-            // Get MGRS String
             var pos = info.position;
             if (pos != null) {
                 coordString = pos.toGeoString(Position.GEO_MGRS);
             }
         }
 
-        // Parse Standard MGRS: "4QFJ 12345 67890" -> "FJ" | "12345 67890"
-        // Simplistic parsing for MVP
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        
         var w = dc.getWidth();
         var h = dc.getHeight();
         
-        if (coordString.length() > 5) {
-            // Assume format "GZD 100k EEEE NNNN"
-            // We want to highlight the 100k ID and the Grid
-            // Rough split: Space delimited
-            
-            // Draw Grid Zone Designator & 100km ID (approximate parsing)
-            dc.drawText(w/2, h/2 - 20, fontMGRS, coordString, Graphics.TEXT_JUSTIFY_CENTER);
-        } else {
-            dc.drawText(w/2, h/2 - 20, fontMGRS, coordString, Graphics.TEXT_JUSTIFY_CENTER);
-        }
+        // Center Middle
+        dc.drawText(w/2, h/2 - (h * 0.1), fontMGRS, coordString, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     // --- ZONE 3: PRESSURE (Bottom) ---
     function drawPressureGraph(dc) {
-        // Access history
-        var history = SensorHistory.getPressureHistory({:period => 20, :order => SensorHistory.ORDER_NEWEST_FIRST});
-        // Drawing logic would go here - simplified line for MVP
-        
         var width = dc.getWidth();
         var height = dc.getHeight();
-        var bottom = height - 10;
-        var graphHeight = 40;
+        var bottom = height * 0.85; // Bottom Area
+        var graphHeight = height * 0.15;
         
         dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawLine(20, bottom, width-20, bottom); // Base line
+        dc.drawLine(width * 0.2, bottom, width * 0.8, bottom); // Base line
         
-        // Mock Graph Line
+        // Mock Graph
         dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
-        dc.drawLine(20, bottom-10, width/2, bottom-20);
-        dc.drawLine(width/2, bottom-20, width-20, bottom-5);
+        dc.drawLine(width * 0.2, bottom - (graphHeight*0.3), width * 0.5, bottom - (graphHeight*0.6));
+        dc.drawLine(width * 0.5, bottom - (graphHeight*0.6), width * 0.8, bottom - (graphHeight*0.2));
         
-        // Current Value
+        // Value
+        var history = SensorHistory.getPressureHistory({:period => 1, :order => SensorHistory.ORDER_NEWEST_FIRST});
         var sample = history.next();
         if (sample != null && sample.data != null) {
-            var val = (sample.data / 100).format("%d"); // Pa -> hPa
+            var val = (sample.data / 100).format("%d");
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(width/2, bottom - graphHeight - 5, fontSmall, val + " hPa", Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(width/2, bottom + 5, fontSmall, val + " hPa", Graphics.TEXT_JUSTIFY_CENTER);
         }
     }
 
     // --- ZONE 4: EYE WINDOW (Custom) ---
     function drawEyeWindow(dc) {
-        // Instinct 'Eye' is roughly at top right, usually around 2 o'clock position
-        // On Instinct 2/3 it is a hardware circle. We can just draw in that area.
-        // Approx coordinates for Instinct 2: 135, 35, radius 28 (Custom per device, using approximate absolute)
+        // Dynamic Eye Position (Top Right ~2 o'clock)
+        var w = dc.getWidth();
         
-        var eyeX = dc.getWidth() - 40; 
-        var eyeY = 40;
-        var r = 25;
+        // Approx Eye Center for Instinct series is usually ~75% width, ~20% height
+        var eyeX = w * 0.77; 
+        var eyeY = w * 0.22;
+        var r = w * 0.14; // Radius relative to screen size relative to 'Eye' cutout
 
-        // Draw Moon Phase (Simple Circle Phase)
+        // Draw Moon Phase
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawCircle(eyeX, eyeY, 10);
-        dc.fillCircle(eyeX + 3, eyeY, 8); // Fake Waxing Gibbous
+        dc.drawCircle(eyeX, eyeY, r * 0.5);
+        dc.fillCircle(eyeX + (r*0.1), eyeY, r * 0.4); 
         
-        // Draw Sunset Progress Ring
+        // Draw Sunset Ring
         dc.setPenWidth(3);
-        dc.drawArc(eyeX, eyeY, r, Graphics.ARC_CLOCKWISE, 90, 0); // Mock progress
+        dc.drawArc(eyeX, eyeY, r, Graphics.ARC_CLOCKWISE, 90, 0); 
     }
 }
