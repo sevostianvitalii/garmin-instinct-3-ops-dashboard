@@ -20,12 +20,18 @@ A tactical, high-contrast dashboard for Garmin Instinct 2, 2X, and 3 series. Des
 
 ### Method 1: Pre-compiled (Sideload)
 
-1. Download the latest `OpsDashboard.prg` from the [Releases](../../releases) page (or the root of this repo if available).
-2. Connect your Garmin Instinct watch data cable to your computer.
-3. Open the `GARMIN` drive/volume that appears.
-4. Copy `OpsDashboard.prg` into the `GARMIN/APPS` folder.
-5. Disconnect the watch safely.
-6. The widget "OpsDash" will appear in your main loop.
+**For Instinct 3 Solar**:
+
+1. Download `OpsDashboard_I3Solar.prg` (from this repo).
+2. Connect your watch via USB.
+3. Copy the file to `GARMIN/APPS/`.
+
+**For Instinct 2**:
+
+1. Download `OpsDashboard.prg` (if available) or build from source using `instinct2` target.
+2. Copy to `GARMIN/APPS/`.
+
+**Note**: The widget "OpsDash" will appear in your main loop (Glances).
 
 ### Method 2: Build from Source
 
