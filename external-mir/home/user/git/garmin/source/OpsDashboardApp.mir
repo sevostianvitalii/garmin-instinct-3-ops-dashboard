@@ -1,0 +1,47 @@
+[ @file = "/home/user/git/garmin/source/OpsDashboardApp.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Application,1,13,24]; ]
+using Toybox.Application;
+[ @file = "/home/user/git/garmin/source/OpsDashboardApp.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "/home/user/git/garmin/source/OpsDashboardApp.mc"; @line = 4; @symbol_classdef = [OpsDashboardApp,4,6,21]; @symbol_extends<0> = [Application,4,30,41]; @symbol_extends<1> = [AppBase,4,42,49]; ]
+class OpsDashboardApp extends Application.AppBase {
+    [ @file = "/home/user/git/garmin/source/OpsDashboardApp.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/home/user/git/garmin/source/OpsDashboardApp.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/home/user/git/garmin/source/OpsDashboardApp.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; ]
+    function initialize() as Void {
+_home_user_git_garmin_source_OpsDashboardApp_mc_6_26_8_4_start:
+[ "/home/user/git/garmin/source/OpsDashboardApp.mc" 7 8 ]
+        symbol [ AppBase %tmp.2 7 8 15 ];
+        %tmp.2 = getv ? :AppBase;
+        symbol [ initialize %tmp.3 7 16 26 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_home_user_git_garmin_source_OpsDashboardApp_mc_6_26_8_4_stop:
+    }
+    [ @file = "/home/user/git/garmin/source/OpsDashboardApp.mc"; @line = 11; @symbol_functiondef = [onStart,11,13,20]; @symbol_param<0> = [state,11,21,26]; ]
+    function onStart(state) {
+    }
+    [ @file = "/home/user/git/garmin/source/OpsDashboardApp.mc"; @line = 15; @symbol_functiondef = [onStop,15,13,19]; @symbol_param<0> = [state,15,20,25]; ]
+    function onStop(state) {
+    }
+    [ @file = "/home/user/git/garmin/source/OpsDashboardApp.mc"; @line = 19; @symbol_functiondef = [getInitialView,19,13,27]; ]
+    function getInitialView() {
+_home_user_git_garmin_source_OpsDashboardApp_mc_19_30_21_4_start:
+[ "/home/user/git/garmin/source/OpsDashboardApp.mc" 20 8 ]
+        %tmp.1 = newa 1;
+        symbol [ OpsDashboardView %tmp.5 20 21 37 ];
+        %tmp.5 = getv ? :OpsDashboardView;
+        %tmp.2 = newc %tmp.5 ();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.2;
+        ret %tmp.7;
+_home_user_git_garmin_source_OpsDashboardApp_mc_19_30_21_4_stop:
+    }
+}
+[ @file = "/home/user/git/garmin/source/OpsDashboardApp.mc"; @line = 1; ]
+<init> {
+}

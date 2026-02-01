@@ -1,0 +1,9 @@
+<strings>
+    <string id="AppName">OpsDash</string>
+    <string id="LauncherIcon">LauncherIcon</string>
+    
+    <!-- Dashboard Labels -->
+    <string id="LabelMGRS">MGRS</string>
+    <string id="LabelHPA">hPa</string>
+    <string id="LabelStealth">STEALTH</string>
+</strings>

@@ -1,0 +1,20 @@
+# Garmin SDK
+bin/
+mir/
+gen/
+internal-mir/
+*.debug.xml
+*.prg
+*.iq
+
+# Private Keys
+developer_key.der
+developer_key.pem
+developer_key.keystore
+
+# System
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
