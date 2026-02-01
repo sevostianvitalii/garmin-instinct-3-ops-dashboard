@@ -55,45 +55,48 @@ class OpsDashboardView extends WatchUi.View {
     // --- ZONE 1: STEALTH INDEX (Top) ---
     function drawStealthIndex(dc) {
         var settings = System.getDeviceSettings();
-        var isStealth = true;
         
         var w = dc.getWidth();
         var h = dc.getHeight();
+        var cy = h * 0.15; // Top area
         var cx = w / 2;
-        var y = h * 0.15; // 15% down (Top area)
-        var iconOffset = w * 0.12; // Spread icons by 12% width
-        var r = w * 0.025; // Radius ~2.5%
+        var spacing = w * 0.18;
         
-        // Icons
-        // BT
+        // Font for indicators
+        var fontInd = Graphics.FONT_XTINY;
+
+        // Draw "Tactical" Text Indicators
+        
+        // 1. BT (Left)
         if (settings.phoneConnected) {
-            dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_TRANSPARENT);
-            dc.fillCircle(cx - iconOffset, y, r); // BT Indicator
-            isStealth = false;
+            dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_TRANSPARENT); // Active
+            dc.drawText(cx - spacing, cy, fontInd, "BT", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         } else {
-            dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
-            dc.drawCircle(cx - iconOffset, y, r);
+            dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT); // Inactive
+            dc.drawText(cx - spacing, cy, fontInd, "BT", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         }
 
-        // Tones/Vibe
+        // 2. VIBE/TONE (Center)
+        // If everything is silent/off = STEALTH
         if (settings.vibrateOn) {
             dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_TRANSPARENT);
-            dc.fillCircle(cx, y - (r*1.2), r); // Slightly higher or center
-            isStealth = false;
+            dc.drawText(cx, cy, fontInd, "VIB", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         } else {
+             // In stealth/silent mode, shows dimmed or "SLNT"? 
+             // Keeping it consistent: Dimmed tag
             dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
-            dc.drawCircle(cx, y - (r*1.2), r);
+            dc.drawText(cx, cy, fontInd, "VIB", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         }
         
-        // GPS
+        // 3. GPS (Right)
         var info = Position.getInfo();
-        if (info.accuracy > Position.QUALITY_POOR) {
+        var gpsActive = (info.accuracy > Position.QUALITY_POOR);
+        if (gpsActive) {
              dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
-             dc.fillCircle(cx + iconOffset, y, r); 
-             isStealth = false; 
+             dc.drawText(cx + spacing, cy, fontInd, "GPS", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER); 
         } else {
              dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
-             dc.drawCircle(cx + iconOffset, y, r);
+             dc.drawText(cx + spacing, cy, fontInd, "GPS", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         }
     }
 
@@ -112,9 +115,49 @@ class OpsDashboardView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         var w = dc.getWidth();
         var h = dc.getHeight();
+        var centerY = h / 2;
         
-        // Center Middle
-        dc.drawText(w/2, h/2 - (h * 0.1), fontMGRS, coordString, Graphics.TEXT_JUSTIFY_CENTER);
+        // Split String logic
+        // Standard MGRS: "4QFJ 12345 67890" (approx 16-18 chars)
+        // This is too wide for Large Font on one line.
+        // Split into:
+        // Line 1: "4Q FJ" (GZD + 100k)
+        // Line 2: "12345 67890" (Coords)
+        
+        // Find split point (first space usually)
+        var splitIdx = coordString.find(" ");
+        var line1 = coordString;
+        var line2 = "";
+        
+        if (splitIdx != null) {
+            // Check for second space (GZD 100k Digits)
+            var remainder = coordString.substring(splitIdx + 1, coordString.length());
+            var secondSpace = remainder.find(" ");
+            
+            if (secondSpace != null) {
+                // Format: "4Q FJ 12345 67890"
+                // Line 1: "4Q FJ"
+                // Line 2: "12345 67890"
+                var totalSplit = splitIdx + 1 + secondSpace;
+                line1 = coordString.substring(0, totalSplit);
+                line2 = coordString.substring(totalSplit + 1, coordString.length());
+            } else {
+                 // Format: "4QFJ 1234567890" or similar
+                 line1 = coordString.substring(0, splitIdx);
+                 line2 = remainder;
+            }
+        }
+        
+        if (line2.length() > 0) {
+            // Two Lines
+            // Line 1 (GZD) slightly smaller or same
+            dc.drawText(w/2, centerY - (h * 0.12), Graphics.FONT_MEDIUM, line1, Graphics.TEXT_JUSTIFY_CENTER);
+            // Line 2 (Grid) Large
+            dc.drawText(w/2, centerY + (h * 0.02), Graphics.FONT_LARGE, line2, Graphics.TEXT_JUSTIFY_CENTER);
+        } else {
+             // Single Line fallback (e.g. NO GPS)
+             dc.drawText(w/2, centerY - 10, Graphics.FONT_MEDIUM, coordString, Graphics.TEXT_JUSTIFY_CENTER);
+        }
     }
 
     // --- ZONE 3: PRESSURE (Bottom) ---
