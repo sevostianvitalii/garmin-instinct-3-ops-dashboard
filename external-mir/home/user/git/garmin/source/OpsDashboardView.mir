@@ -925,13 +925,13 @@ _home_user_git_garmin_source_OpsDashboardView_mc_151_32_157_8_start:
         %tmp.125 = add %tmp.121 %tmp.124;
         symbol [ Graphics %tmp.126 156 51 59 ];
         %tmp.126 = getm $.Toybox.Graphics;
-        symbol [ FONT_LARGE %tmp.127 156 60 70 ];
-        %tmp.127 = getv %tmp.126 :FONT_LARGE;
+        symbol [ FONT_MEDIUM %tmp.127 156 60 71 ];
+        %tmp.127 = getv %tmp.126 :FONT_MEDIUM;
         %tmp.128 = lgetv %line2.9;
-        symbol [ line2 %tmp.128 156 72 77 ];
-        symbol [ Graphics %tmp.129 156 79 87 ];
+        symbol [ line2 %tmp.128 156 73 78 ];
+        symbol [ Graphics %tmp.129 156 80 88 ];
         %tmp.129 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.130 156 88 107 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.130 156 89 108 ];
         %tmp.130 = getv %tmp.129 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.116 %tmp.117(%tmp.120, %tmp.125, %tmp.127, %tmp.128, %tmp.130);
 _home_user_git_garmin_source_OpsDashboardView_mc_151_32_157_8_stop:

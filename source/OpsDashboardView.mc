@@ -152,8 +152,8 @@ class OpsDashboardView extends WatchUi.View {
             // Two Lines
             // Line 1 (GZD) slightly smaller or same
             dc.drawText(w/2, centerY - (h * 0.12), Graphics.FONT_MEDIUM, line1, Graphics.TEXT_JUSTIFY_CENTER);
-            // Line 2 (Grid) Large
-            dc.drawText(w/2, centerY + (h * 0.02), Graphics.FONT_LARGE, line2, Graphics.TEXT_JUSTIFY_CENTER);
+            // Line 2 (Grid) Medium (Safer fit than Large)
+            dc.drawText(w/2, centerY + (h * 0.02), Graphics.FONT_MEDIUM, line2, Graphics.TEXT_JUSTIFY_CENTER);
         } else {
              // Single Line fallback (e.g. NO GPS)
              dc.drawText(w/2, centerY - 10, Graphics.FONT_MEDIUM, coordString, Graphics.TEXT_JUSTIFY_CENTER);
