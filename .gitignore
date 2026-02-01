@@ -4,7 +4,6 @@ mir/
 gen/
 internal-mir/
 *.debug.xml
-*.prg
 *.iq
 
 # Private Keys
@@ -18,3 +17,7 @@ Thumbs.db
 
 # VS Code
 .vscode/
+
+#agent skills
+.agent/
+
